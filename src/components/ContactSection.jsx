@@ -25,10 +25,10 @@ export default function ContactSection() {
 
     emailjs
       .sendForm(
-        "your_service_id", // ✅ Replace with EmailJS Service ID
-        "your_template_id", // ✅ Replace with EmailJS Template ID
+        "service_5pnp42r", // ✅ Replace with EmailJS Service ID
+        "template_a6f4sjj", // ✅ Replace with EmailJS Template ID
         form.current,
-        "your_public_key" // ✅ Replace with EmailJS Public Key
+        "DNCRjbjp8-L4_pUPa" // ✅ Replace with EmailJS Public Key
       )
       .then(
         () => {
