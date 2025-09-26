@@ -5,7 +5,6 @@ import { FaRegClock, FaTasks, FaCheckCircle, FaUsers } from "react-icons/fa";
 
 import { motion } from "framer-motion";
 import HeroImg from "../assets/Heroimg.jpeg";
-
 export default function HeroSection() {
   return (
     <div className="bg-[#F8F7F1] min-h-screen flex flex-col items-center justify-center px-4 py-12">
@@ -87,15 +86,8 @@ export default function HeroSection() {
               className="w-[280px] md:w-[350px] lg:w-[400px] object-cover transform scale-110"
             />
 
-            {/* Floating Social Icons */}
             
-
-            
-            
-          </div>
-
-          {/* Stats */}
-          
+          </div>          
         </div>
        
       </div>

@@ -212,19 +212,14 @@ export default function ContactSection() {
         </a>
       </div>
 
-      {/* ✅ Animated NOTE Section */}
-      {/* ✅ Animated NOTE Section with Typing Effect */}
-{/* ✅ Animated NOTE Section with Better Layout */}
 <motion.div
-  className="mt-12 flex items-center gap-3 bg-[#fff3f0] border border-[#f05228] px-6 py-4 rounded-xl shadow-md max-w-6xl mx-auto"
+  className="mt-12 flex items-start gap-3 bg-[#fff3f0] border border-[#f05228] px-4 sm:px-6 py-4 rounded-xl shadow-md max-w-full sm:max-w-6xl mx-auto"
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ duration: 0.8 }}
 >
-  {/* Icon stays aligned inside box */}
-  <FaInfoCircle className="text-[#f05228] text-2xl flex-shrink-0" />
+  <FaInfoCircle className="text-[#f05228] text-xl sm:text-2xl flex-shrink-0 mt-1" />
 
-  {/* Animated text */}
   <motion.span
     initial={{ width: 0 }}
     animate={{ width: "100%" }}
@@ -234,11 +229,13 @@ export default function ContactSection() {
       ease: "linear",
       repeatDelay: 2,
     }}
-    className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-[#f05228] pr-1 text-[#032737] font-figtree font-medium"
+    className="inline-block overflow-hidden whitespace-normal sm:whitespace-nowrap border-r-2 border-[#f05228] pr-1 text-[#032737] font-figtree font-medium text-sm sm:text-base"
   >
-    NOTE: Some projects are private and owned by the company. I do not have permission to use them for personal advertisement and promotions.
+    NOTE: Some projects are private and owned by the company. I do not have
+    permission to use them for personal advertisement and promotions.
   </motion.span>
 </motion.div>
+
 
 
 
