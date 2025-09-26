@@ -13,9 +13,11 @@ import {
   FaMapMarkerAlt,
   FaDownload,
 } from "react-icons/fa";
+      import { FaInfoCircle } from "react-icons/fa";
+
 import { SiUpwork } from "react-icons/si";
-import ContactImg from "../assets/Heroimg.jpeg"; // ✅ Replace with your image
-import CV from "../assets/Muhhamad Adnan.pdf"; // ✅ Your CV PDF
+import ContactImg from "../assets/Heroimg.jpeg"; 
+import CV from "../assets/Muhhamad Adnan.pdf"; 
 
 export default function ContactSection() {
   const form = useRef();
@@ -25,18 +27,18 @@ export default function ContactSection() {
 
     emailjs
       .sendForm(
-        "service_5pnp42r", // ✅ Replace with EmailJS Service ID
-        "template_a6f4sjj", // ✅ Replace with EmailJS Template ID
+        "service_g6bo8ne", 
+        "template_a6f4sjj", 
         form.current,
-        "DNCRjbjp8-L4_pUPa" // ✅ Replace with EmailJS Public Key
+        "DNCRjbjp8-L4_pUPa" 
       )
       .then(
         () => {
-          alert("✅ Message Sent Successfully!");
+          alert(" Message Sent Successfully!");
           e.target.reset();
         },
         (error) => {
-          alert("❌ Something went wrong. Try again.");
+          alert(" Something went wrong. Try again.");
           console.error(error.text);
         }
       );
@@ -52,7 +54,7 @@ export default function ContactSection() {
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 1 }}
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-figtree text-[#032737] font-bold text-center mb-12"
         >
@@ -183,6 +185,10 @@ export default function ContactSection() {
       </div>
 
       {/* CV Buttons */}
+
+
+
+      {/* CV Buttons */}
       <div className="flex flex-col md:flex-row gap-4 mt-10 w-full max-w-3xl">
         {/* View CV */}
         <a
@@ -205,6 +211,37 @@ export default function ContactSection() {
           Download CV
         </a>
       </div>
+
+      {/* ✅ Animated NOTE Section */}
+      {/* ✅ Animated NOTE Section with Typing Effect */}
+{/* ✅ Animated NOTE Section with Better Layout */}
+<motion.div
+  className="mt-12 flex items-center gap-3 bg-[#fff3f0] border border-[#f05228] px-6 py-4 rounded-xl shadow-md max-w-6xl mx-auto"
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* Icon stays aligned inside box */}
+  <FaInfoCircle className="text-[#f05228] text-2xl flex-shrink-0" />
+
+  {/* Animated text */}
+  <motion.span
+    initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    transition={{
+      duration: 8,
+      repeat: Infinity,
+      ease: "linear",
+      repeatDelay: 2,
+    }}
+    className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-[#f05228] pr-1 text-[#032737] font-figtree font-medium"
+  >
+    NOTE: Some projects are private and owned by the company. I do not have permission to use them for personal advertisement and promotions.
+  </motion.span>
+</motion.div>
+
+
+
     </section>
   );
 }
