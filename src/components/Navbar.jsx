@@ -17,7 +17,7 @@ const Navbar = () => {
   <img 
     src={logoImage}          
     alt="WAT Logo"           
-    className="h-18 w-auto object-contain flex-shrink-0" 
+    className="h-16 w-auto object-contain flex-shrink-0" 
   />
 </div>
 
