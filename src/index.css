@@ -1,8 +1,35 @@
+/* src/index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* === YAHAN SE CUSTOM CSS ADD KAREIN === */
 
-body {
-  @apply font-figtree;
+/* Har navbar link ke liye base styles */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* Underline (initially chupi hui) */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #0052CC; /* Maine yahan direct color code likh diya hai */
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Jab link active ho to uski underline show ho */
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Active link ka text color bhi change karein */
+.nav-link.active {
+  color: #0052CC; /* Yahan bhi direct color code */
 }

@@ -1,16 +1,27 @@
-import HeroSection from "./components/HeroSection"
-import ProjectSection from "./components/ProjectSection"
-import ContactSection from "./components/ContactSection"
+
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import WhyUs from './components/Whyus';
+import Services from './components/Services';
+import Contact from './components/getus';
 
 function App() {
   return (
-    <>
-      <HeroSection/>
-      <ProjectSection/>
-        <ContactSection />
+    <div>
+      <Navbar />
+      <main>
+        <Home />
+        <About />
+        <WhyUs />
+        <Services />
+        <Contact/>
+      </main>
+            <div className="h-screen"></div>
 
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
