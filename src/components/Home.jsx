@@ -15,8 +15,8 @@ const Home = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-dark leading-tight">
             The <span className="text-primary">Technical</span> Doctor's
           </h1>
-          <p className="mt-4 text-lg text-gray-600">We Are Together</p>
-          <p className="mt-6 text-gray-700 max-w-lg">
+          <p className="mt-5 text-lg text-gray-600 mb-[-3px]">We Are Together (Private Limited)</p>
+          <p className="mt-3 text-gray-700 max-w-lg">
             Delivering more than just services—we deliver peace of mind. Your trusted partner for technical solutions.
           </p>
           <Link
@@ -31,12 +31,11 @@ const Home = () => {
         </div>
         
         {/* Right Side (Image) */}
-        <div className="md:w-1/2 mt-10 md:mt-0">
-          {/* STEP 3: Yahan URL ki jagah variable istemal karein */}
+       <div className="md:w-1/2 mt-10 md:mt-0">
           <img 
             src={heroImage} 
             alt="Team meeting" 
-            className="rounded-lg shadow-xl" 
+            className="rounded-lg shadow-xl w-full h-100 object-cover" 
           />
         </div>
       </div>

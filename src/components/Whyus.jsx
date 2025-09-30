@@ -2,32 +2,40 @@
 
 import React from 'react';
 
-// STEP 1: Apni local image ko yahan import karein
 import aboutVideo from '../assets/intorduction.mp4'; 
 
 const WhyUs = () => {
   return (
     <section id="why-us" className="py-20 bg-blue-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-dark mb-4">Why Us</h2>
-          <div className="w-24 h-1 bg-primary mx-auto"></div>
-        </div>
+        
+        {/* Main Flex Container */}
         <div className="flex flex-col md:flex-row items-center gap-10">
+
+          {/* Left Column (Video) */}
           <div className="md:w-1/2">
-                    <video 
-                      src={aboutVideo} 
-                      autoPlay  // Video ko automatically play karega
-                      loop      // Video ko khatam hone par dobara chalayega
-                      muted     // Autoplay ke liye muted hona zaroori hai
-                      playsInline // iOS par fullscreen hone se rokega
-                      className="rounded-lg shadow-xl w-full"
-                    >
-                      Aapka browser video tag ko support nahi karta.
-                    </video>
-                  </div>
+            <video 
+              src={aboutVideo} 
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="rounded-lg shadow-xl w-full"
+            >
+              Aapka browser video tag ko support nahi karta.
+            </video>
+          </div>
          
+          {/* Right Column (Heading aur Text) */}
           <div className="md:w-1/2 text-gray-600 space-y-6">
+
+            {/* === HEADING KO YAHAN MOVE KAR DIYA GAYA HAI === */}
+            <div className="mb-6 text-center md:text-left">
+              <h2 className="text-3xl font-bold text-dark mb-4">Why Us</h2>
+              <div className="w-24 h-1 bg-primary mx-auto md:mx-0"></div>
+            </div>
+            {/* === SECTION END === */}
+            
             <p>
               At The Technical Doctors, expertise is not just a claim—it's a standard. Every technician on our team is a certified diploma holder with over five years of hands-on experience, ensuring your needs are handled by seasoned professionals.
             </p>
