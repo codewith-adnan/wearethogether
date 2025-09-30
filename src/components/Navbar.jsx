@@ -2,7 +2,7 @@
 
 import React from 'react'; 
 import { Link } from 'react-scroll';
-import logoImage from '../assets/WAT Logo_ Unity in Design (1).png'; 
+import logoImage from '../assets/logo.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
