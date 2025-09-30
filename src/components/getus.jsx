@@ -1,7 +1,7 @@
 // src/components/Contact.jsx
 
 import React from 'react';
-import logoImage from '../assets/WAT Logo_ Unity in Design (1).png'; 
+import logoImage from '../assets/main.png'; 
 import { 
   FaPhone, 
   FaEnvelope, 

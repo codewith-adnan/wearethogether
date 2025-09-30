@@ -2,7 +2,7 @@
 
 import React from 'react'; 
 import { Link } from 'react-scroll';
-import logoImage from '../assets/logo.png'; 
+import logoImage from '../assets/main.png'; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
