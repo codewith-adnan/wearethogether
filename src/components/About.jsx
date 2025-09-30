@@ -3,7 +3,7 @@
 import React from 'react';
 
 // STEP 1: Apni video file ko yahan import karein
-import aboutVideo from '../assets/intorduction.mp4';
+import professionalImage from '../assets/whyus.jpeg';
 
 const About = () => {
   return (
@@ -12,18 +12,16 @@ const About = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
         
         {/* Left Column (Video) */}
-        <div className="md:w-1/2">
-          <video 
-            src={aboutVideo} 
-            autoPlay  // Video ko automatically play karega
-            loop      // Video ko khatam hone par dobara chalayega
-            muted     // Autoplay ke liye muted hona zaroori hai
-            playsInline // iOS par fullscreen hone se rokega
-            className="rounded-lg shadow-xl w-full"
-          >
-            Aapka browser video tag ko support nahi karta.
-          </video>
-        </div>
+         <div className="md:w-1/2">
+            {/* 
+              STEP 2: Yahan URL ki jagah import kiya hua variable istemal karein
+            */}
+            <img 
+              src={professionalImage} 
+              alt="Professional Technician" 
+              className="rounded-lg shadow-xl"
+            />
+          </div>
 
         {/* Right Column (Text Content) */}
         <div className="md:w-1/2 text-center md:text-left">

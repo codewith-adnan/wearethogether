@@ -1,5 +1,9 @@
 // src/components/WhyUs.jsx
+
 import React from 'react';
+
+// STEP 1: Apni local image ko yahan import karein
+import aboutVideo from '../assets/intorduction.mp4'; 
 
 const WhyUs = () => {
   return (
@@ -11,8 +15,18 @@ const WhyUs = () => {
         </div>
         <div className="flex flex-col md:flex-row items-center gap-10">
           <div className="md:w-1/2">
-            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Professional Technician" className="rounded-lg shadow-xl"/>
-          </div>
+                    <video 
+                      src={aboutVideo} 
+                      autoPlay  // Video ko automatically play karega
+                      loop      // Video ko khatam hone par dobara chalayega
+                      muted     // Autoplay ke liye muted hona zaroori hai
+                      playsInline // iOS par fullscreen hone se rokega
+                      className="rounded-lg shadow-xl w-full"
+                    >
+                      Aapka browser video tag ko support nahi karta.
+                    </video>
+                  </div>
+         
           <div className="md:w-1/2 text-gray-600 space-y-6">
             <p>
               At The Technical Doctors, expertise is not just a claim—it's a standard. Every technician on our team is a certified diploma holder with over five years of hands-on experience, ensuring your needs are handled by seasoned professionals.

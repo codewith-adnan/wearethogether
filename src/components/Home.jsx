@@ -24,7 +24,7 @@ const Home = () => {
             smooth={true}
             duration={500}
             offset={-70}
-            className="mt-8 inline-block bg-primary text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 cursor-pointer"
+            className="mt-8 inline-block bg-blue-700 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-900 transition duration-300 cursor-pointer"
           >
             Explore Our Services
           </Link>
