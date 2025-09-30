@@ -83,7 +83,7 @@ const Contact = () => {
         </div>
 
         <div className="mt-12 text-center border-t border-gray-700 pt-6">
-          <p>&copy; {new Date().getFullYear()} WAT - We Are Together. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()}  All Rights Reserved.<br></br>codewithadnan</p>
         </div>
       </div>
     </footer>
