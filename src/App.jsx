@@ -18,7 +18,6 @@ function App() {
         <Services />
         <Contact/>
       </main>
-            <div className="h-screen"></div>
 
     </div>
   );

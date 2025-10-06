@@ -11,13 +11,13 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       
-      <div className="container mx-auto px-6 py-1 flex justify-between items-center">
+      <div className="container mx-auto  px-6 py-1 flex justify-between items-center">
         
        <div className="flex items-center">
   <img 
     src={logoImage}          
     alt="WAT Logo"           
-    className="h-16 w-auto object-contain flex-shrink-0" 
+    className="h-20 w-20 w-auto object-contain flex-shrink-0" 
   />
 </div>
 
