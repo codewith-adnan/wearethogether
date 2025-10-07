@@ -31,5 +31,8 @@
 
 /* Active link ka text color bhi change karein */
 .nav-link.active {
-  color: #0052CC; /* Yahan bhi direct color code */
+  color: #2563eb; /* Tailwind blue-600 */
+  /* text-decoration: underline; */
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
 }

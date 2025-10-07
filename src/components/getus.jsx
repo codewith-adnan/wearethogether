@@ -1,51 +1,80 @@
 // src/components/Contact.jsx
 
-import React from 'react';
-import logoImage from '../assets/main.png'; 
-import { 
-  FaPhone, 
-  FaEnvelope, 
-  FaMapMarkerAlt, 
-  FaWhatsapp, 
-  FaInstagram, 
-  FaFacebook 
-} from 'react-icons/fa';
+import React, { useState } from "react";
+import logoImage from "../assets/main.png";
+import {
+  FaPhone,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const Contact = () => {
-  const socialLinks = {
-    whatsapp: 'https://whatsapp.com/channel/0029Vb7ULltGJP8D3x5Ve005',
-    instagram: 'https://www.instagram.com/thetechnicaldoctorsbywatpvtltd?igsh=MW1henplZWRuZzBzZg==',
-    facebook: 'https://www.facebook.com/share/16ybuDoz6C/'
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("03173284147");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
+
+  const socialLinks = {
+    whatsapp: "https://whatsapp.com/channel/0029Vb7ULltGJP8D3x5Ve005",
+    instagram:
+      "https://www.instagram.com/thetechnicaldoctorsbywatpvtltd?igsh=MW1henplZWRuZzBzZg==",
+    facebook: "https://www.facebook.com/share/16ybuDoz6C/",
+  };
+
+  const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
 
   return (
     <footer id="contact" className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-6">
-        
-        <div className="flex flex-col md:flex-row justify-between text-center md:text-left gap-10">
-
-          {/* === Left Column (Logo aur Text) === */}
-          {/* Main ne aapka negative margin hata diya hai, iski zaroorat nahi */}
-          <div className="md:w-1/3 mt-[-55px]"> 
-            <img 
-              src={logoImage} 
+        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+          
+          <div className="text-center md:text-left mt-[-40px]">
+            <img
+              src={logoImage}
               alt="WAT Logo"
-              // STEP 1: Logo ko bright karne ke liye filter classes add ki hain
-              className="h-40 w-auto mx-auto md:mx-0  filter brightness-0 invert" 
+              className="h-40 w-auto mx-auto md:mx-0 filter brightness-0 invert"
             />
-            {/* Maine aapka purana text wapas add kar diya hai jo pehle tha */}
-            <p className="text-gray-400 text-sm">
-              Delivering more than just services—we deliver peace of mind. Your trusted partner for technical solutions.
-              At The Technical Doctors, expertise is not just a claim—it's a standard. Every technician on our team is a certified diploma holder with over five years of hands-on experience, ensuring your needs are handled by seasoned professionals.
+            <p className="text-gray-400 text-sm mt-1 w-[250px] mx-auto md:mx-0">
+              Delivering more than just services — we deliver peace of mind.
+              <br />
+              Your trusted partner for technical solutions. At The Technical
+              Doctors, every technician is a certified diploma holder with over
+              five years of hands-on experience.
             </p>
           </div>
 
-          {/* === Right Column (Contact Info) === */}
-          <div className="md:w-2/3 flex flex-col items-center md:items-start">
-            <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-            <div className="w-24 h-1 bg-primary mb-6"></div>
-            
-            <div className="flex flex-col md:flex-row gap-4 md:gap-8 mb-6">
+          <div className="text-center">
+            <h2 className="text-1xl font-semibold mb-3">Stay Connected</h2>
+            <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+
+            <ul className="space-y-3 tracking-wide">
+              {navLinks.map((link) => (
+                <li key={link}>
+                  <Link
+                    to={link.toLowerCase().replace(" ", "-")}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    className="cursor-pointer text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col md:items-start text-center md:text-left">
+            <h2 className="text-1xl font-bold mb-4 text-white">Contact Us</h2>
+            <div className="w-20 h-1 bg-blue-500 mx-auto md:mx-0 mb-6"></div>
+            <div className="flex flex-col gap-3">
               <div className="text-center md:text-left">
                 <h3 className="text-xl font-bold">Muhammad Ahmad</h3>
                 <p className="text-cyan-400">CEO & Founder</p>
@@ -55,35 +84,66 @@ const Contact = () => {
                 <p className="text-cyan-400">Director</p>
               </div>
             </div>
+            <div className="text-gray-300 my-6 space-y-3">
+              <div className="relative flex items-center justify-center md:justify-start gap-3 cursor-pointer group"
+                   onClick={handleCopy}>
+                <FaPhone />
+                <span>0317 - 3284147</span>
+                {copied && (
+                  <span className="absolute top-[-30px] bg-green-500 text-white text-xs px-2 py-1 rounded">
+                    Copied!
+                  </span>
+                )}
+              </div>
 
-            <div className="flex flex-col items-center md:items-start gap-2 text-lg mb-6">
-              <a href="tel:03173284147" className="flex items-center gap-3 hover:text-cyan-400">
-                <FaPhone /> 0317 - 3284147
+              <a
+                href="mailto:Infowat477@gmail.com"
+                className="flex items-center justify-center md:justify-start gap-3 hover:text-blue-400"
+              >
+                <FaEnvelope /> Infowat477@gmail.com
               </a>
-              <a href="mailto:Infowat477@gmail.com" className="flex items-center gap-3 hover:text-cyan-400">
-                <FaEnvelope /> Infowat4-477@gmail.com
-              </a>
-              <p className="flex items-center gap-3">
+
+              <p className="flex items-center justify-center md:justify-start gap-3">
                 <FaMapMarkerAlt /> Rawalpindi, Islamabad
               </p>
             </div>
 
-            <div className="flex justify-center items-center gap-8">
-              <a href={socialLinks.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                <FaWhatsapp className="text-4xl text-white hover:text-green-500 transition-colors duration-300" />
+            <div className="flex justify-center md:justify-start items-center gap-6 mb-6">
+              <a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="text-3xl text-white hover:text-green-500 transition-colors duration-300" />
               </a>
-              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FaInstagram className="text-4xl text-white hover:text-pink-500 transition-colors duration-300" />
+              <a
+                href={socialLinks.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-3xl text-white hover:text-pink-500 transition-colors duration-300" />
               </a>
-              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <FaFacebook className="text-4xl text-white hover:text-blue-500 transition-colors duration-300" />
+              <a
+                href={socialLinks.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="text-3xl text-white hover:text-blue-500 transition-colors duration-300" />
               </a>
             </div>
+
           </div>
         </div>
 
-        <div className="mt-12 text-center border-t border-gray-700 pt-6">
-          <p>&copy; {new Date().getFullYear()}  All Rights Reserved.<br></br>codewithadnan</p>
+        <div className="mt-8 text-center border-t border-gray-700 pt-6 text-gray-400 text-sm mb-[-50px]">
+          <p>
+            &copy; {new Date().getFullYear()} All Rights Reserved.
+            <br />
+            <span className="text-blue-400 font-semibold ">codewithadnan</span>
+          </p>
         </div>
       </div>
     </footer>
