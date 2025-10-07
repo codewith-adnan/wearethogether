@@ -1,7 +1,7 @@
-// src/components/Contact.jsx
+
 
 import React, { useState } from "react";
-import logoImage from "../assets/WAT Logo_ Unity in Design (1).png";
+import logoImage from "../assets/watlogo.png";
 import {
   FaPhone,
   FaEnvelope,
@@ -141,7 +141,7 @@ const Contact = () => {
           <p>
             &copy; {new Date().getFullYear()} All Rights Reserved.
             <br />
-            <span className="text-blue-400 font-semibold ">codewithadnan</span>
+            <span className="text-blue-400 font-semibold ">sendtomadnan@gmail.com</span>
           </p>
         </div>
       </div>

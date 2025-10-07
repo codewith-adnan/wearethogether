@@ -1,8 +1,6 @@
 // src/components/Navbar.jsx
-
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/main.png"; // ⚠️ Make sure file name & case match exactly!
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -12,13 +10,14 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="container mx-auto px-6 py-1 flex justify-between items-center">
-        {/* ---- Logo ---- */}
+        {/* ---- Logo (Text-based) ---- */}
         <div className="flex items-center">
-          <img
-            src={logo}
-            alt="WAT Logo"
-            className="h-20 w-20 object-contain flex-shrink-0"
-          />
+          <h1 className="text-3xl font-extrabold text-blue-600 tracking-wide">
+            WAT<span className="text-gray-800">.</span>
+          </h1>
+          <p className="ml-2 text-sm text-gray-500 hidden sm:block">
+            We Are Together
+          </p>
         </div>
 
         {/* ---- Desktop Nav Links ---- */}
