@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import logoImage from "../assets/watlogo.png";
+import logoImage from "../assets/together.svg";
 import {
   FaPhone,
   FaEnvelope,
@@ -38,7 +38,7 @@ const Contact = () => {
             <img
               src={logoImage}
               
-              className="h-40 w-auto mx-auto md:mx-0 filter brightness-0 invert"
+              className="h-16 w-auto mx-auto md:mx-0 filter brightness-2 invert"
             />
             <p className="text-gray-400 text-sm mt-1 w-[250px] mx-auto md:mx-0">
               Delivering more than just services — we deliver peace of mind.

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/image.png"; 
+import logo from "../assets/together.svg"; 
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -11,12 +11,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="container mx-auto px-5 py-1 flex justify-between items-center">
+      <div className="container mx-auto px-6  flex justify-between items-center">
         {/* ---- Logo ---- */}
         <div className="flex items-center">
           <img
             src={logo}
-            className="h-20 w-20  "
+            className="h-20 w-20   "
           />
         </div>
 
