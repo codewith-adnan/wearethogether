@@ -39,7 +39,7 @@ const Contact = () => {
           <div className="text-center md:text-left mt-[-40px]">
             <img
               src={logoImage}
-              alt="WAT Logo"
+              
               className="h-40 w-auto mx-auto md:mx-0 filter brightness-0 invert"
             />
             <p className="text-gray-400 text-sm mt-1 w-[250px] mx-auto md:mx-0">
