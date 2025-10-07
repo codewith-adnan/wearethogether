@@ -1,7 +1,7 @@
 // src/components/Contact.jsx
 
 import React, { useState } from "react";
-import logoImage from "../assets/main.png";
+import logoImage from "../assets/WAT Logo_ Unity in Design (1).png";
 import {
   FaPhone,
   FaEnvelope,
@@ -33,9 +33,7 @@ const Contact = () => {
   return (
     <footer id="contact" className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-6">
-        {/* === CHANGE IS IN THE LINE BELOW === */}
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
-          
           <div className="text-center md:text-left mt-[-40px]">
             <img
               src={logoImage}
