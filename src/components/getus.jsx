@@ -33,7 +33,8 @@ const Contact = () => {
   return (
     <footer id="contact" className="py-20 bg-gray-800 text-white">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-10">
+        {/* === CHANGE IS IN THE LINE BELOW === */}
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
           
           <div className="text-center md:text-left mt-[-40px]">
             <img
@@ -71,7 +72,7 @@ const Contact = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col md:items-start text-center md:text-left">
+          <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h2 className="text-1xl font-bold mb-4 text-white">Contact Us</h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto md:mx-0 mb-6"></div>
             <div className="flex flex-col gap-3">
