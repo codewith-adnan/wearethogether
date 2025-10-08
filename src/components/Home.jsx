@@ -3,14 +3,12 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-// STEP 2: Apni image ko yahan import karein
 import heroImage from '../assets/Home.jpeg'; 
 
 const Home = () => {
   return (
     <section id="home" className="pt-24 md:pt-32 bg-blue-50">
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center">
-        {/* Left Side (Text) */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold text-dark leading-tight">
             The <span className="text-primary">Technical</span> Doctor's
@@ -30,7 +28,6 @@ const Home = () => {
           </Link>
         </div>
         
-        {/* Right Side (Image) */}
        <div className="md:w-1/2 mt-10 md:mt-0">
           <img 
             src={heroImage} 

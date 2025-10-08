@@ -10,46 +10,45 @@ import carpentryImage from '../assets/ceilling.jfif';
 import itImage from '../assets/it.jfif';
 import realEstateImage from '../assets/real.jfif';
 
-// STEP 1: Har service ko ek unique 'id' dein
 const servicesData = [
   { 
-    id: 1, // Unique ID add ki
+    id: 1, 
     image: electricalImage, 
     name: "Electrical & Plumbing",
     description: "From minor repairs to complete system installations, our certified electricians and plumbers ensure safety and efficiency for your home or office."
   },
   { 
-    id: 2, // Unique ID add ki
+    id: 2, 
     image: paintingImage, 
     name: "Renovation & Painting",
     description: "Transform your space with our expert renovation and painting services. We handle everything from a single room refresh to a full-scale remodel."
   },
   { 
-    id: 3, // Unique ID add ki
+    id: 3, 
     image: applianceImage, 
     name: "Appliance Installation and Repair",
     description: "We install and repair all major home appliances, including refrigerators, washing machines, and ovens, with precision and care."
   },
   { 
-    id: 4, // Unique ID add ki
+    id: 4, 
     image: cctvImage, 
     name: "CCTV and Smart Tech Solutions",
     description: "Secure your property with our advanced CCTV and smart home solutions. We provide installation, maintenance, and expert advice."
   },
   { 
-    id: 5, // Unique ID add ki
+    id: 5, 
     image: carpentryImage, 
     name: "Carpentry, Flooring and False Ceilings",
     description: "Custom furniture, elegant flooring, and modern false ceilings. Our skilled carpenters bring your vision to life with quality craftsmanship."
   },
   { 
-    id: 6, // Unique ID add ki
+    id: 6, 
     image: itImage, 
     name: "IT and Office Management",
     description: "Reliable IT support and office management services to keep your business running smoothly. We handle networking, hardware, and software issues."
   },
   { 
-    id: 7, // Unique ID add ki
+    id: 7, 
     image: realEstateImage, 
     name: "Real Estate",
     description: "Whether you are buying, selling, or renting, our real estate experts provide trusted guidance and comprehensive services to meet your needs."

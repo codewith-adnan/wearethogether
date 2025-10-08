@@ -8,10 +8,8 @@ const WhyUs = () => {
     <section id="why-us" className="py-20 bg-blue-50">
       <div className="container mx-auto px-6">
         
-        {/* Reverse order for larger screens */}
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
 
-          {/* Video Section (now on right side for desktop) */}
           <div className="md:w-1/2">
             <video 
               src={aboutVideo} 
@@ -25,7 +23,6 @@ const WhyUs = () => {
             </video>
           </div>
 
-          {/* Text Section (now on left side) */}
           <div className="md:w-1/2 text-gray-600 space-y-6">
             <div className="mb-6 text-center md:text-left">
               <h2 className="text-3xl font-bold text-dark mb-4">Why Us</h2>

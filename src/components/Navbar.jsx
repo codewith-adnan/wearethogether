@@ -1,8 +1,6 @@
-// src/components/Navbar.jsx
-
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/together.svg"; 
+import logo from "../assets/together.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -13,12 +11,21 @@ const Navbar = () => {
     <nav className="bg-white shadow-md fixed w-full top-0 z-50">
       <div className="container mx-auto px-6  flex justify-between items-center">
         {/* ---- Logo ---- */}
-        <div className="flex items-center">
+        <div className="flex flex-col items-center">
           <img
             src={logo}
-            className="h-20 w-20   "
+            className="h-20 w-32" 
           />
+          <div className="flex justify-center -mt-10 space-x-2">
+            <span style={{ color: '#f39c12', fontWeight: 'bold' }}>w</span>
+            <span style={{ color: '#945708', fontWeight: 'bold' }}>e</span>
+            <span className="mx-1 gap-5"></span>
+            <span style={{ color: '#033f66', fontWeight: 'bold' }}>a</span>
+            <span style={{ color: '#e74c3c', fontWeight: 'bold' }}>r</span>
+            <span style={{ color: '#2ecc71', fontWeight: 'bold' }}>e</span>
+          </div>
         </div>
+
 
         {/* ---- Desktop Nav Links ---- */}
         <div className="hidden md:flex space-x-6">
