@@ -24,15 +24,15 @@
   transition: width 0.3s ease-in-out;
 }
 
-/* Jab link active ho to uski underline show ho */
+
 .nav-link.active::after {
   width: 100%;
 }
 
-/* Active link ka text color bhi change karein */
+
 .nav-link.active {
-  color: #2563eb; /* Tailwind blue-600 */
-  /* text-decoration: underline; */
+  color: #2563eb; 
+  
   text-underline-offset: 4px;
   text-decoration-thickness: 2px;
 }
