@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
-import logo from "../assets/together.svg";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/watlogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -8,93 +9,135 @@ const Navbar = () => {
   const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
 
   return (
-    <nav className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="container mx-auto px-6  flex justify-between items-center">
-        {/* ---- Logo ---- */}
-        <div className="flex flex-col items-center">
-          <img
-            src={logo}
-            className="h-20 w-32" 
-          />
-          <div className="flex justify-center -mt-10 space-x-2">
-            <span style={{ color: '#f39c12', fontWeight: 'bold' }}>w</span>
-            <span style={{ color: '#945708', fontWeight: 'bold' }}>e</span>
-            <span className="mx-1 gap-5"></span>
-            <span style={{ color: '#033f66', fontWeight: 'bold' }}>a</span>
-            <span style={{ color: '#e74c3c', fontWeight: 'bold' }}>r</span>
-            <span style={{ color: '#2ecc71', fontWeight: 'bold' }}>e</span>
+    <nav className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-8 flex items-center justify-between pointer-events-none">
+      
+      {/* ---- Logo & Branding ---- */}
+      <div className="flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
+        <img
+          src={logo}
+          className="h-20 md:h-24 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+          alt="WAT Logo"
+        />
+      </div>
+
+      {/* ---- Desktop Nav Rail ---- */}
+      <div className="relative pointer-events-auto flex items-center gap-4 z-[101]">
+        <div className="hidden lg:flex items-center capsule-nav">
+          <div className="flex items-center gap-10 px-10 py-3.5">
+            <div className="flex items-center gap-8">
+              {navLinks.slice(0, 4).map((link) => (
+                <Link
+                  key={link}
+                  activeClass="active-capsule"
+                  to={link.toLowerCase().replace(" ", "-")}
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                >
+                  <span className="fluid-text-container">
+                    <span className="fluid-text-item">{link}</span>
+                    <span className="fluid-text-item text-blue-600">{link}</span>
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="glow-btn-wrapper"
+            >
+              <div className="glow-btn-inner">
+                GET IN TOUCH
+              </div>
+            </Link>
           </div>
         </div>
 
-
-        {/* ---- Desktop Nav Links ---- */}
-        <div className="hidden md:flex space-x-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link}
-              activeClass="active"
-              to={link.toLowerCase().replace(" ", "-")}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="nav-link cursor-pointer text-gray-600 hover:text-blue-600 hover:underline underline-offset-4 decoration-2 transition duration-300"
-            >
-              {link}
-            </Link>
-          ))}
-        </div>
-
-        {/* ---- Mobile Menu Button ---- */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-600 focus:outline-none"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d={
-                  isOpen
-                    ? "M6 18L18 6M6 6l12 12"
-                    : "M4 6h16M4 12h16M4 18h16"
-                }
-              ></path>
-            </svg>
-          </button>
-        </div>
+        {/* ---- Mobile Burger Tool ---- */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="lg:hidden w-14 h-14 rounded-2xl bg-gray-100/50 border border-gray-200/50 backdrop-blur-xl flex flex-col items-center justify-center gap-1.5 transition-all hover:bg-gray-200/80 pointer-events-auto"
+        >
+          <motion.span
+            animate={isOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }}
+            className="w-7 h-[1.5px] bg-gray-800 rounded-full"
+          />
+          <motion.span
+            animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+            className="w-7 h-[1.5px] bg-gray-800 rounded-full"
+          />
+          <motion.span
+            animate={isOpen ? { rotate: -45, y: -7.5 } : { rotate: 0, y: 0 }}
+            className="w-7 h-[1.5px] bg-gray-800 rounded-full"
+          />
+        </button>
       </div>
 
-      {/* ---- Mobile Nav Links ---- */}
-      {isOpen && (
-        <div className="md:hidden bg-white px-6 pb-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link}
-              activeClass="active"
-              to={link.toLowerCase().replace(" ", "-")}
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              onClick={() => setIsOpen(false)}
-              className="block py-2 cursor-pointer text-gray-600 hover:text-blue-600 hover:underline underline-offset-4 decoration-2 transition duration-300"
-            >
-              {link}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* ---- Mobile Menu Overlay ---- */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ y: "-100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 bg-white/95 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center pointer-events-auto"
+          >
+            <nav className="flex flex-col items-center gap-8">
+              {navLinks.map((link, index) => (
+                <motion.div
+                  key={link}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                >
+                  <Link
+                    to={link.toLowerCase().replace(" ", "-")}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="text-3xl font-black tracking-widest uppercase text-gray-800 hover:text-blue-600 transition-all cursor-pointer"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link}
+                  </Link>
+                </motion.div>
+              ))}
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5 }}
+                className="mt-8"
+              >
+                <Link 
+                  to="contact" 
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                  className="glow-btn-wrapper scale-125" 
+                  onClick={() => setIsOpen(false)}
+                >
+                  <div className="glow-btn-inner px-10 py-4">
+                    GET IN TOUCH
+                  </div>
+                </Link>
+              </motion.div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
+
 };
 
 export default Navbar;
