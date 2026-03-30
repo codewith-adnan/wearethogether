@@ -35,7 +35,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="relative pt-32 pb-12 px-6 bg-white text-gray-900 font-sans overflow-hidden border-t border-gray-100">
+    <footer id="contact" className="relative  pb-12 px-6 bg-white text-gray-900 font-sans overflow-hidden border-t border-gray-100">
 
       {/* Main Grid Container */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-8 pt-24 pb-12">
@@ -44,7 +44,7 @@ const Footer = () => {
         <div className="md:col-span-6 flex flex-col md:justify-between gap-8 md:gap-0 font-sans">
           <div>
             {/* Branding - Advanced Logo Style */}
-            <div className="flex flex-col items-start mb-10 relative">
+            <div className="flex flex-col items-start  relative">
               <img
                 src={logo}
                 alt="WAT Logo"
