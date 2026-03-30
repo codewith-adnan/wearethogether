@@ -1,4 +1,7 @@
-/* src/index.css */
+:root {
+  --logo-gradient: linear-gradient(135deg, #033f66 0%, #2ecc71 50%, #f39c12 100%);
+  --logo-gradient-text: linear-gradient(135deg, #033f66 0%, #2ecc71 100%);
+}
 
 @tailwind base;
 @tailwind components;
@@ -8,12 +11,26 @@
 
 
 .capsule-nav {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 100px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+  padding: 1px; /* Space for gradient border */
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.capsule-nav::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: var(--logo-gradient);
+  opacity: 0.15; /* Subtle gradient border */
 }
 
 .glow-btn-wrapper {
@@ -25,7 +42,7 @@
 }
 
 .glow-btn-inner {
-  background: #033f66;
+  background: var(--logo-gradient);
   color: white;
   padding: 10px 24px;
   border-radius: 100px;
@@ -33,14 +50,14 @@
   font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(3, 63, 102, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 4px 15px rgba(3, 63, 102, 0.2);
 }
 
 .glow-btn-wrapper:hover .glow-btn-inner {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(3, 63, 102, 0.4);
-  background: #044b7a;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(3, 63, 102, 0.4);
+  filter: brightness(1.1);
 }
 
 .glow-btn-wrapper:active .glow-btn-inner {
@@ -77,6 +94,34 @@
 .active-capsule {
   color: #033f66 !important;
   font-weight: 900 !important;
+}
+
+.hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  display: flex;
+  width: 200%;
+  animation: marquee 30s linear infinite;
 }
 
 

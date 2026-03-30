@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
+import MagneticButton from "./MagneticButton";
 import logo from "../assets/watlogo.png";
 
 const Navbar = () => {
@@ -9,13 +10,13 @@ const Navbar = () => {
   const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-8 flex items-center justify-between pointer-events-none">
+    <nav className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-3 flex items-center justify-between pointer-events-none">
       
       {/* ---- Logo & Branding ---- */}
       <div className="flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
         <img
           src={logo}
-          className="h-20 md:h-24 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+          className="h-20 md:h-28 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
           alt="WAT Logo"
         />
       </div>
@@ -26,36 +27,40 @@ const Navbar = () => {
           <div className="flex items-center gap-10 px-10 py-3.5">
             <div className="flex items-center gap-8">
               {navLinks.slice(0, 4).map((link) => (
-                <Link
-                  key={link}
-                  activeClass="active-capsule"
-                  to={link.toLowerCase().replace(" ", "-")}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={500}
-                  className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
-                >
-                  <span className="fluid-text-container">
-                    <span className="fluid-text-item">{link}</span>
-                    <span className="fluid-text-item text-blue-600">{link}</span>
-                  </span>
-                </Link>
+                <MagneticButton key={link} distance={0.2}>
+                  <Link
+                    key={link}
+                    activeClass="active-capsule"
+                    to={link.toLowerCase().replace(" ", "-")}
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                  >
+                    <span className="fluid-text-container">
+                      <span className="fluid-text-item">{link}</span>
+                      <span className="fluid-text-item text-blue-600">{link}</span>
+                    </span>
+                  </Link>
+                </MagneticButton>
               ))}
             </div>
 
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="glow-btn-wrapper"
-            >
-              <div className="glow-btn-inner">
-                GET IN TOUCH
-              </div>
-            </Link>
+            <MagneticButton distance={0.4}>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="glow-btn-wrapper"
+              >
+                <div className="glow-btn-inner">
+                  GET IN TOUCH
+                </div>
+              </Link>
+            </MagneticButton>
           </div>
         </div>
 
