@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="absolute left-6 md:left-12  flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
         <img
           src={logo}
-          className="h-24 md:h-32 lg:h-36 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+          className="h-24 md:h-34 lg:h-36 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
           alt="WAT Logo"
         />
       </div>

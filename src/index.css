@@ -44,6 +44,7 @@
   text-decoration: none;
   cursor: pointer;
   pointer-events: auto;
+  margin-bottom: 5px;
 }
 
 .glow-btn-inner {

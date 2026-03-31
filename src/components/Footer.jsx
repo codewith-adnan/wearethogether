@@ -138,7 +138,6 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto mt-15 pt-10 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center opacity-40 text-center md:text-left gap-4">
-        <p className="text-[10px] uppercase tracking-[2px] font-black">© 2026 We Are Together │ All Rights Reserved</p>
         <p className="text-[10px] uppercase tracking-[2px] font-black">Lahore, Pakistan │ The Technical Doctors (Private Limited)</p>
       </div>
 
