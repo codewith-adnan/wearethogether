@@ -10,7 +10,7 @@ const Navbar = () => {
   const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[100] px-2 md:px-12 py-5 flex items-start justify-end pointer-events-none">
+    <nav className="fixed top-0 left-0 w-full z-[100] px-4 md:px-12 py-6 flex items-center justify-end pointer-events-none">
 
       {/* ---- Logo & Branding ---- */}
       <div className="absolute left-6 md:left-12  flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
@@ -24,7 +24,7 @@ const Navbar = () => {
       {/* ---- Desktop Nav Rail ---- */}
       <div className="relative pointer-events-auto flex items-center gap-4 z-[101]">
         <div className="hidden lg:flex items-center capsule-nav">
-          <div className="flex items-center gap-10 px-10 py-2">
+          <div className="flex items-center gap-10 px-10 py-1">
             <div className="flex items-center gap-8">
               {navLinks.slice(0, 4).map((link) => (
                 <MagneticButton key={link} distance={0.2}>
