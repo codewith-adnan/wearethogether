@@ -34,8 +34,9 @@ const Navbar = () => {
                     to={link.toLowerCase().replace(" ", "-")}
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={500}
+                    // offset={-70}
+                    duration={1500}
+                    easing="easeInOutQuart"
                     className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
                   >
                     <span className="fluid-text-container">
@@ -52,8 +53,9 @@ const Navbar = () => {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
-                duration={500}
+                // offset={-70}
+                duration={1500}
+                easing="easeInOutQuart"
                 className="glow-btn-wrapper"
               >
                 <div className="glow-btn-inner">
@@ -106,8 +108,9 @@ const Navbar = () => {
                     to={link.toLowerCase().replace(" ", "-")}
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={500}
+                    // offset={-70}
+                    duration={1500}
+                    easing="easeInOutQuart"
                     className="text-3xl font-black tracking-widest uppercase text-gray-800 hover:text-blue-600 transition-all cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
@@ -126,8 +129,9 @@ const Navbar = () => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-70}
-                  duration={500}
+                  // offset={-70}
+                  duration={1500}
+                  easing="easeInOutQuart"
                   className="glow-btn-wrapper scale-125"
                   onClick={() => setIsOpen(false)}
                 >

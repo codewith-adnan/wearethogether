@@ -14,7 +14,7 @@ import logo from "../assets/watlogo.png";
 
 const Footer = () => {
   const scrollToTop = () => {
-    scroll.scrollToTop({ duration: 1000, smooth: 'easeInOutQuad' });
+    scroll.scrollToTop({ duration: 2000, smooth: 'easeInOutQuart' });
   };
 
   const navLinks = [
@@ -94,8 +94,9 @@ const Footer = () => {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
-                  className="text-2xl md:text-xl font-black uppercase transition-all duration-300 hover:text-blue-500 text-gray-800 no-underline cursor-pointer"
+                  duration={2000}
+                  easing="easeInOutQuart"
+                  className="text-2xl md:text-xl font-black uppercase transition-all duration-300 hover:text-blue-600 text-gray-800 no-underline cursor-pointer"
                 >
                   {item.name}
                 </Link>

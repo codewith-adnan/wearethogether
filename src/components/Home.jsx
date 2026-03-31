@@ -62,7 +62,7 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-8 text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-[0.3em]"
+            className="mt-8 text-[10px] md:text-2xl font-bold text-gray-400 uppercase tracking-[0.15em] md:tracking-[0.3em] whitespace-nowrap"
           >
             We Are Together (Private Limited)
           </motion.p>
@@ -87,8 +87,8 @@ const Home = () => {
               <Link
                 to="services"
                 smooth={true}
-                duration={500}
-                offset={-70}
+                duration={2000}
+                easing="easeInOutQuart"
                 className="glow-btn-wrapper"
               >
                 <div className="glow-btn-inner px-12 py-5 text-sm">
