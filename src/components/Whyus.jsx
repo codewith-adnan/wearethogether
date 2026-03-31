@@ -25,7 +25,7 @@ const WhyUs = () => {
 
           <div className="md:w-1/2 text-gray-600 space-y-6">
             <div className="mb-6 text-center md:text-left">
-              <h2 className="text-3xl font-bold text-dark mb-4">Why Us</h2>
+              <h2 className="text-3xl font-bold text-dark mb-4 uppercase">Why Us</h2>
               <div className="w-24 h-1 bg-primary mx-auto md:mx-0"></div>
             </div>
 

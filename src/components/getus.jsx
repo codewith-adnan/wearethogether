@@ -60,7 +60,7 @@ const Contact = () => {
 </div>
 
           <div className="text-center">
-            <h2 className="text-1xl font-semibold mb-3">Stay Connected</h2>
+            <h2 className="text-1xl font-semibold mb-3 uppercase">Stay Connected</h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
 
             <ul className="space-y-3 tracking-wide">
@@ -81,7 +81,7 @@ const Contact = () => {
           </div>
 
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <h2 className="text-1xl font-bold mb-4 text-white">Contact Us</h2>
+            <h2 className="text-1xl font-bold mb-4 text-white uppercase">Contact Us</h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto md:mx-0 mb-6"></div>
             <div className="flex flex-col gap-3">
               <div className="text-center md:text-left">
