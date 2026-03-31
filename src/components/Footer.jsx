@@ -63,20 +63,20 @@ const Footer = () => {
           </div>
 
           {/* Advanced Social Icons (Fill-Reveal Effect) */}
-          <div className="flex flex-wrap gap-4 mt-2">
+          <div className="flex flex-nowrap gap-3 md:gap-4 mt-2">
             {iconLinks.map(({ Icon, url, hoverBgColor }, idx) => (
               <a
                 key={idx}
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative flex items-center justify-center w-12 h-12 rounded-2xl bg-white border border-gray-100 shadow-sm text-gray-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden group"
+                className="relative flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white border border-gray-100 shadow-sm text-gray-500 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-500/10 overflow-hidden group"
               >
                 {/* Background Animation Layer */}
                 <span className={`absolute inset-0 w-full h-full translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out ${hoverBgColor}`}></span>
 
                 {/* Icon Layer */}
-                <Icon size={20} className="relative z-10 transition-colors duration-500 group-hover:text-white" />
+                <Icon className="w-[18px] h-[18px] md:w-5 md:h-5 relative z-10 transition-colors duration-500 group-hover:text-white" />
               </a>
             ))}
           </div>

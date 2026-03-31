@@ -12,14 +12,32 @@ const Home = () => {
       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-400/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-400/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-      {/* ---- Subtle Background Typography (Marquee) ---- */}
-      <div className="hero-bg-text opacity-[0.08] select-none pointer-events-none w-full overflow-hidden">
-        <div className="marquee-container text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900">
-          <span className="mx-8">WE ARE TOGETHER</span>
-          <span className="mx-8">WE ARE TOGETHER</span>
-          <span className="mx-8">WE ARE TOGETHER</span>
-          <span className="mx-8">WE ARE TOGETHER</span>
-        </div>
+      {/* ---- Subtle Background Typography (Diagonal Static) ---- */}
+      <div className="absolute inset-0 select-none pointer-events-none z-0 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 0.04, x: 0 }}
+          transition={{ duration: 1.5, delay: 0.2 }}
+          className="absolute top-[10%] left-[5%] text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+        >
+          WE
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 0.04, scale: 1 }}
+          transition={{ duration: 1.5, delay: 0.4 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+        >
+          ARE
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 0.04, x: 0 }}
+          transition={{ duration: 1.5, delay: 0.6 }}
+          className="absolute bottom-[10%] right-[5%] text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+        >
+          TOGETHER
+        </motion.div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
