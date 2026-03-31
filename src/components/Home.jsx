@@ -71,7 +71,7 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed"
+            className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed text-justify"
           >
             Delivering more than just services—we deliver peace of mind. <br className="hidden md:block" />
             Your trusted partner for cinematic technical solutions.

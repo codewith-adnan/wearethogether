@@ -50,7 +50,7 @@ const Contact = () => {
     <span style={{ color: '#2ecc71', fontWeight: 'bold' }}>e</span>
   </div>
   
-  <p className="text-gray-400 text-sm mt-4 w-[250px] mx-auto md:mx-0">
+  <p className="text-gray-400 text-sm mt-4 w-[250px] mx-auto md:mx-0 text-justify">
     Delivering more than just services — we deliver peace of mind.
     <br />
     Your trusted partner for technical solutions. At The Technical

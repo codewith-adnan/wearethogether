@@ -28,7 +28,7 @@ const About = () => {
           <h2 className="text-3xl font-bold text-dark mb-4 uppercase">Introduction</h2>
           {/* Underline ko left align karne ke liye 'md:mx-0' add karein */}
           <div className="w-24 h-1 bg-primary mx-auto md:mx-0 mb-8"></div>
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed text-justify">
             At The Technical Doctors, we pride ourselves on delivering more than just services—we deliver peace of mind. Our team of trusted technicians is carefully selected for their expertise, professionalism, and commitment to excellence. We understand the value of your time, which is why punctuality is a cornerstone of our promise. From the moment you book with us to the final walkthrough, we ensure every detail meets the highest standards. With quality work guaranteed, we don't just fix problems—we build lasting trust.
           </p>
         </div>

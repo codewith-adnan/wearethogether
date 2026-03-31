@@ -75,7 +75,7 @@ const ServiceCard = ({ image, name, description }) => {
         <div
           className={`transition-all duration-500 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
         >
-          <p className="text-gray-600 pt-2 border-t border-gray-200">
+          <p className="text-gray-600 pt-2 border-t border-gray-200 text-justify">
             {description}
           </p>
         </div>
@@ -91,7 +91,7 @@ const Services = () => {
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-dark mb-4 uppercase">Our Services</h2>
           <div className="w-24 h-1 bg-primary mx-auto "></div>
-          <p className="text-gray-600 max-w-2xl mx-auto mt-[-5px]" >
+          <p className="text-gray-600 max-w-2xl mx-auto mt-[-5px] text-justify" >
             Quality work, guaranteed. We build lasting trust by fixing problems right the first time.
           </p>
         </div>

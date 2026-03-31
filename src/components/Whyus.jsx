@@ -29,10 +29,10 @@ const WhyUs = () => {
               <div className="w-24 h-1 bg-primary mx-auto md:mx-0"></div>
             </div>
 
-            <p>
+            <p className="text-justify">
               At The Technical Doctors, expertise is not just a claim—it's a standard. Every technician on our team is a certified diploma holder with over five years of hands-on experience, ensuring your needs are handled by seasoned professionals.
             </p>
-            <p>
+            <p className="text-justify">
               Our commitment to excellence extends beyond technical skills—our team is available 100% of the time, ready to respond promptly and efficiently. We uphold the highest level of professionalism, with staff who are not only skilled but also well-mannered and respectful. With us, you're not just hiring a service—you're welcoming reliability, experience, and integrity into your space.
             </p>
           </div>
