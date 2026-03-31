@@ -95,7 +95,7 @@ const Services = () => {
             Quality work, guaranteed. We build lasting trust by fixing problems right the first time.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
           {servicesData.map(service => (
             <ServiceCard
               key={service.id}

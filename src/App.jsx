@@ -6,6 +6,7 @@ import About from './components/About';
 import WhyUs from './components/Whyus';
 import Services from './components/Services';
 import Footer from './components/Footer';
+import Partners from './components/Partners';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <main>
         <Home />
+        <Partners />
         <About />
         <WhyUs />
         <Services />
