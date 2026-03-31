@@ -37,7 +37,7 @@ const Partners = () => {
             className="inline-block px-5 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6"
           >
             <span className="text-[10px] md:text-xs font-extrabold tracking-[0.2em] text-blue-600 uppercase">
-              Our Partners
+              Our Clients
             </span>
           </motion.div>
 
@@ -48,9 +48,22 @@ const Partners = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-gray-900 leading-tight"
           >
-            Trusted by <span className="text-blue-600">Leaders</span>
+            Trusted by the <span className="text-blue-600">Best</span>
           </motion.h2>
-          <div className="w-24 h-1 bg-blue-600 mt-6 rounded-full opacity-20"></div>
+
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg justify-center  leading-relaxed text-justify"
+          >
+            We take pride in partnering with industry leaders and visionaries.
+            From local startups to multinational giants, we deliver technical
+            excellence that drives results.
+          </motion.p>
+
+          <div className="w-24 h-1 bg-blue-600 mt-8 rounded-full opacity-20"></div>
         </div>
 
         {/* Partners Grid */}
@@ -74,12 +87,12 @@ const Partners = () => {
                   ease: "easeInOut",
                   delay: index * 0.5,
                 }}
-                className="h-32 md:h-40 bg-white border border-gray-100 rounded-3xl flex items-center justify-center p-8 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/5 hover:border-blue-100 cursor-default"
+                className="h-32 md:h-40 bg-white border border-blue-100 rounded-3xl flex items-center justify-center p-8 transition-all duration-500 shadow-xl shadow-blue-500/15 cursor-default"
               >
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-full w-auto object-contain grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out"
+                  className="max-h-full w-auto object-contain transition-all duration-700 ease-out"
                 />
               </motion.div>
             </motion.div>
