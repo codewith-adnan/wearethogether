@@ -14,30 +14,37 @@ const Home = () => {
 
       {/* ---- Subtle Background Typography (Diagonal Static) ---- */}
       <div className="absolute inset-0 select-none pointer-events-none z-0 overflow-hidden">
-        <motion.div
+
+        {/* WE - Top Left */}
+        <motion.div tog
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 0.04, x: 0 }}
           transition={{ duration: 1.5, delay: 0.2 }}
-          className="absolute top-[10%] left-[5%] text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+          className="absolute top-[10%] left-[1%] text-[8vw] md:text-[10vw] font-black uppercase tracking-tighter text-gray-900 leading-none"
         >
           WE
         </motion.div>
+
+        {/* ARE - Center/Slightly Offset */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 0.04, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.4 }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+          className="absolute top-[45%] left-[40%] -translate-x-1/2 -translate-y-1/2 text-[8vw] md:text-[10vw] font-black uppercase tracking-tighter text-gray-900 leading-none"
         >
           ARE
         </motion.div>
+
+        {/* TOGETHER - Bottom Right */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 1, x: 50 }}
           animate={{ opacity: 0.04, x: 0 }}
           transition={{ duration: 1.5, delay: 0.6 }}
-          className="absolute bottom-[10%] right-[5%] text-[18vw] md:text-[15vw] font-black uppercase tracking-tighter text-gray-900"
+          className="absolute bottom-[1%] right-[1%] text-right text-[8vw] md:text-[10vw] font-black uppercase tracking-tighter text-gray-900 leading-none"
         >
           TOGETHER
         </motion.div>
+
       </div>
 
       <div className="container mx-auto px-6 relative z-10 text-center">
@@ -74,7 +81,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1, duration: 0.5 }}
-            className="mt-12"
+            className="mt-12 "
           >
             <MagneticButton distance={0.5}>
               <Link

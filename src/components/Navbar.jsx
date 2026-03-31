@@ -10,13 +10,13 @@ const Navbar = () => {
   const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-3 flex items-center justify-between pointer-events-none">
-      
+    <nav className="fixed top-0 left-0 w-full z-[100] px-2 md:px-12 py-5 flex items-start justify-end pointer-events-none">
+
       {/* ---- Logo & Branding ---- */}
-      <div className="flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
+      <div className="absolute left-6 md:left-12  flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
         <img
           src={logo}
-          className="h-20 md:h-28 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+          className="h-24 md:h-32 lg:h-36 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
           alt="WAT Logo"
         />
       </div>
@@ -24,7 +24,7 @@ const Navbar = () => {
       {/* ---- Desktop Nav Rail ---- */}
       <div className="relative pointer-events-auto flex items-center gap-4 z-[101]">
         <div className="hidden lg:flex items-center capsule-nav">
-          <div className="flex items-center gap-10 px-10 py-3.5">
+          <div className="flex items-center gap-10 px-10 py-2">
             <div className="flex items-center gap-8">
               {navLinks.slice(0, 4).map((link) => (
                 <MagneticButton key={link} distance={0.2}>
@@ -122,13 +122,13 @@ const Navbar = () => {
                 transition={{ delay: 0.5 }}
                 className="mt-8"
               >
-                <Link 
-                  to="contact" 
+                <Link
+                  to="contact"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="glow-btn-wrapper scale-125" 
+                  className="glow-btn-wrapper scale-125"
                   onClick={() => setIsOpen(false)}
                 >
                   <div className="glow-btn-inner px-10 py-4">
@@ -142,7 +142,6 @@ const Navbar = () => {
       </AnimatePresence>
     </nav>
   );
-
 };
 
 export default Navbar;
