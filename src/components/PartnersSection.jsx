@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import partnerBg from '../assets/partner background.png';
+// Import only logos
 import logoBrandLines from '../assets/brand line.png';
 import logoRP from '../assets/rp.png';
 import logoGP from '../assets/gp cor.png';
@@ -9,20 +9,21 @@ import logoSSK from '../assets/ssk.png';
 import logoELF from '../assets/elf.png';
 import logoHL from '../assets/hL.png';
 import logoBri from '../assets/the bri.png';
+import bgImage from '../assets/partner background.png';
 
 const PartnersSection = () => {
   const partners = [
-    { id: 1, name: "Brand Lines Advertising", desc: "A key creative partner specializing in branding, outdoor advertising, and large-scale campaign execution — delivering high-impact marketing solutions.", logo: logoBrandLines, logoScale: 1.4 },
-    { id: 2, name: "RP Solutions Pvt Ltd", desc: "Provides advanced IT and operational support, ensuring smooth system integration and efficient project management across all our operations.", logo: logoRP },
-    { id: 3, name: "GP Corporation Pvt Ltd", desc: "A reliable partner in industrial support and supply chain management, contributing significantly to the successful execution of large-scale projects.", logo: logoGP },
-    { id: 4, name: "SSK Builders Pvt Ltd", desc: "Our trusted partner in construction and infrastructure development, supporting commercial builds, site setups, and structural execution.", logo: logoSSK },
-    { id: 5, name: "AA Fabrications", desc: "Experts in custom fabrication and metal works, delivering high-quality on-ground installations, branding structures, and display solutions.", logo: logoELF },
-    { id: 6, name: "Hassan Digital Marketing", desc: "Our digital growth partner, specializing in social media management, paid advertising, and enhancing brand presence across digital platforms.", logo: logoHL },
-    { id: 7, name: "KB Tax & Corporate", desc: "Provides professional services in corporate compliance, taxation, and legal structuring to ensure smooth and secure business operations.", logo: logoBri },
+    { id: 1, name: "Brand Lines Advertising", desc: "A key creative partner specializing in branding, outdoor advertising, and large-scale campaign execution.", logo: logoBrandLines },
+    { id: 2, name: "RP Solutions Pvt Ltd", desc: "Provides advanced IT and operational support, ensuring smooth system integration and efficient project management.", logo: logoRP },
+    { id: 3, name: "GP Corporation Pvt Ltd", desc: "A reliable partner in industrial support and supply chain management, contributing significantly to large-scale projects.", logo: logoGP },
+    { id: 4, name: "SSK Builders Pvt Ltd", desc: "Our trusted partner in construction and infrastructure development, supporting commercial builds and site setups.", logo: logoSSK },
+    { id: 5, name: "AA Fabrications", desc: "Experts in custom fabrication and metal works, delivering high-quality on-ground installations.", logo: logoELF },
+    { id: 6, name: "Hassan Digital Marketing", desc: "Our digital growth partner, specializing in social media management, paid advertising, and enhancing brand presence.", logo: logoHL },
+    { id: 7, name: "KB Tax & Corporate", desc: "Provides professional services in corporate compliance, taxation, and legal structuring.", logo: logoBri },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(2);
-  const [direction, setDirection] = useState(0); // 1 = next (right→left), -1 = prev (left→right)
+  const [activeIndex, setActiveIndex] = useState(partners.length > 2 ? 2 : 0);
+  const [direction, setDirection] = useState(0);
 
   const nextSlide = () => {
     setDirection(1);
@@ -48,8 +49,8 @@ const PartnersSection = () => {
             viewport={{ once: true }}
             className="inline-block px-5 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6"
           >
-            <span className="text-[8px] md:text-xs font-extrabold tracking-[0.2em] text-blue-600 uppercase">
-              Our Global Partnership Ecosystem
+            <span className="text-[8px] md:text-xs font-extrabold tracking-[0.2em] text-[#0000CC] uppercase">
+              Our Strategic Ecosystem
             </span>
           </motion.div>
 
@@ -60,7 +61,7 @@ const PartnersSection = () => {
             transition={{ delay: 0.2 }}
             className="text-3xl md:text-6xl font-black tracking-tighter uppercase text-gray-900 leading-tight px-2"
           >
-            WE ARE <span className="text-blue-600">TOGETHER</span>
+            PARTNERSHIP FOR <span className="text-[#0000CC]">PROGRESS</span>
           </motion.h2>
 
           <motion.p
@@ -70,43 +71,36 @@ const PartnersSection = () => {
             transition={{ delay: 0.3 }}
             className="mt-6 text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed px-4 text-center"
           >
-            Collaboration is more than just working side by side—it's about moving{' '}
-            <span className="text-blue-600 italic font-bold">as one</span>.
-            We unite visionary partners because we believe the greatest innovations
-            happen when strengths combine.
+            We unite visionary partners because we believe the greatest innovations happen
+            when strengths combine. Paving the way{' '}
+            <span className="text-[#0000CC] italic font-bold">as one</span>.
           </motion.p>
-
-          <div className="w-24 h-1 bg-blue-600 mt-8 rounded-full opacity-20"></div>
         </div>
       </div>
 
-      {/* ── IMAGE & CAROUSEL SECTION ── */}
-      <div className="relative w-full min-h-[600px] md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-slate-900 text-white">
-
-        {/* Background Image - Clearer (Opacity adjusted from 70 to 40) */}
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${partnerBg})` }}
-        >
-          {/* Overlay ko light kiya hai (bg-slate-950/40) taake image clear dikhay */}
-          <div className="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px]" />
-        </div>
+      {/* ── LOGO & CAROUSEL SECTION ── */}
+      <div 
+        className="relative w-full min-h-[600px] md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat text-white"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        {/* Semi-transparent overlay to ensure text/logos remain readable */}
+        <div className="absolute inset-0 z-0 bg-[rgba(17,17,17,0.7)]" />
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl  md:px-4 pt-40 md:pt-72 pb-20 flex flex-col items-center">
+        <div className="relative z-10 w-full max-w-7xl md:px-4 pt-32 md:pt-48 pb-16 flex flex-col items-center">
 
           <div className="relative w-full flex items-center justify-center">
 
             {/* Left Arrow */}
             <button
               onClick={prevSlide}
-              className="hidden md:flex absolute left-4 z-30 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 items-center justify-center backdrop-blur-md transition-all border border-white/10"
+              className="hidden md:flex absolute left-4 z-30 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 items-center justify-center transition-all border border-white/10"
             >
-              <ChevronLeft />
+              <ChevronLeft color="white" />
             </button>
 
-            {/* 5-card centered layout with slide animation */}
-            <div className="relative overflow-hidden w-full py-10">
+            {/* Carousel layout */}
+            <div className="relative overflow-hidden w-full py-6">
               <AnimatePresence initial={false} custom={direction} mode="popLayout">
                 <motion.div
                   key={activeIndex}
@@ -119,7 +113,7 @@ const PartnersSection = () => {
                   initial="enter"
                   animate="center"
                   exit="exit"
-                  transition={{ duration: 0.75, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1] }}
                   className="flex items-center justify-center gap-3 md:gap-4"
                 >
                   {[-2, -1, 0, 1, 2].map((offset) => {
@@ -136,27 +130,26 @@ const PartnersSection = () => {
                           opacity: isActive ? 1 : isNear ? 0.60 : 0.35,
                           transition: 'transform 0.4s ease, opacity 0.4s ease',
                         }}
-                        className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border-t border-white/20
-                          ${isActive
-                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/15 shadow-[0_0_50px_rgba(59,130,246,0.4)] backdrop-blur-xl z-20'
+                        className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border border-white/5
+                          ${isActive
+                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/5 shadow-[0_0_60px_rgba(0,0,170,0.5)] z-20'
                             : isNear
-                              ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/5 backdrop-blur-md z-10'
-                              : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/5 backdrop-blur-sm z-0'
+                              ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/3 z-10'
+                              : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/2 z-0'
                           } p-5 md:p-7`}
                       >
-                        {/* Logo Image */}
+                        {/* Logo Image - No background on image itself */}
                         <div className={`mb-5 flex items-center justify-center ${isActive ? 'w-28 h-20' : 'w-20 h-14'} transition-all duration-400`}>
                           <img
                             src={partner.logo}
                             alt={partner.name}
-                            style={{ transform: `scale(${partner.logoScale || 1})` }}
-                            className="max-h-full max-w-full object-contain drop-shadow-md transition-transform"
+                            className="max-h-full max-w-full object-contain"
                           />
                         </div>
-                        <h3 className={`font-bold tracking-wide mb-3 whitespace-nowrap ${isActive ? 'text-lg md:text-xl text-white' : isNear ? 'text-sm md:text-base text-slate-300' : 'text-xs md:text-sm text-slate-400'}`}>
+                        <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : 'text-base text-slate-300'}`}>
                           {partner.name}
                         </h3>
-                        <p className={`text-xs leading-relaxed px-1 text-justify ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
+                        <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
                           {isActive || isNear ? partner.desc : ''}
                         </p>
                       </div>
@@ -169,44 +162,38 @@ const PartnersSection = () => {
             {/* Right Arrow */}
             <button
               onClick={nextSlide}
-              className="hidden md:flex absolute right-4 z-30 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 items-center justify-center backdrop-blur-md transition-all border border-white/10"
+              className="hidden md:flex absolute right-4 z-30 w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 items-center justify-center transition-all border border-white/10"
             >
-              <ChevronRight />
+              <ChevronRight color="white" />
             </button>
           </div>
 
           {/* Mobile arrows */}
           <div className="flex md:hidden gap-6 mt-4">
-            <button onClick={prevSlide} className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center border border-white/10">
-              <ChevronLeft size={18} />
+            <button onClick={prevSlide} className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center border border-white/10">
+              <ChevronLeft size={18} color="white" />
             </button>
-            <button onClick={nextSlide} className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center border border-white/10">
-              <ChevronRight size={18} />
+            <button onClick={nextSlide} className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center border border-white/10">
+              <ChevronRight size={18} color="white" />
             </button>
           </div>
 
-          {/* Pagination Dots */}
+          {/* Pagination Dots - Colors updated to dark blue (#0000AA) and semi-transparent white */}
           <div className="flex items-center gap-3 mt-10">
             {partners.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goTo(index)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-10 bg-blue-500' : 'w-4 bg-white/30 hover:bg-white/50'}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-10 bg-[#0000AA]' : 'w-4 bg-white/30 hover:bg-white/50'}`}
               />
             ))}
           </div>
 
-          <button className="mt-12 flex items-center gap-2 text-xs md:text-sm font-bold tracking-widest uppercase py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 transition-all">
-            Explore Partners <ChevronRight size={16} />
+          <button className="mt-12 flex items-center gap-2 text-xs md:text-sm font-bold tracking-widest uppercase py-3 px-6 rounded-full border border-white/10 hover:bg-white/5 transition-all text-white">
+            Explore Our Partners <ChevronRight size={16} />
           </button>
         </div>
       </div>
-
-      <style dangerouslySetInnerHTML={{
-        __html: `
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-      `}} />
     </div>
   );
 };
