@@ -12,7 +12,7 @@ import logoBri from '../assets/the bri.png';
 
 const PartnersSection = () => {
   const partners = [
-    { id: 1, name: "Brand Lines Advertising", desc: "A key creative partner specializing in branding, outdoor advertising, and large-scale campaign execution — delivering high-impact marketing solutions.", logo: logoBrandLines },
+    { id: 1, name: "Brand Lines Advertising", desc: "A key creative partner specializing in branding, outdoor advertising, and large-scale campaign execution — delivering high-impact marketing solutions.", logo: logoBrandLines, logoScale: 1.4 },
     { id: 2, name: "RP Solutions Pvt Ltd", desc: "Provides advanced IT and operational support, ensuring smooth system integration and efficient project management across all our operations.", logo: logoRP },
     { id: 3, name: "GP Corporation Pvt Ltd", desc: "A reliable partner in industrial support and supply chain management, contributing significantly to the successful execution of large-scale projects.", logo: logoGP },
     { id: 4, name: "SSK Builders Pvt Ltd", desc: "Our trusted partner in construction and infrastructure development, supporting commercial builds, site setups, and structural execution.", logo: logoSSK },
@@ -149,13 +149,14 @@ const PartnersSection = () => {
                           <img
                             src={partner.logo}
                             alt={partner.name}
-                            className="max-h-full max-w-full object-contain drop-shadow-md"
+                            style={{ transform: `scale(${partner.logoScale || 1})` }}
+                            className="max-h-full max-w-full object-contain drop-shadow-md transition-transform"
                           />
                         </div>
-                        <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : isNear ? 'text-base text-slate-300' : 'text-sm text-slate-400'}`}>
+                        <h3 className={`font-bold tracking-wide mb-3 whitespace-nowrap ${isActive ? 'text-lg md:text-xl text-white' : isNear ? 'text-sm md:text-base text-slate-300' : 'text-xs md:text-sm text-slate-400'}`}>
                           {partner.name}
                         </h3>
-                        <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
+                        <p className={`text-xs leading-relaxed px-1 text-justify ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
                           {isActive || isNear ? partner.desc : ''}
                         </p>
                       </div>
