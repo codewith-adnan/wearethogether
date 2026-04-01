@@ -7,6 +7,7 @@ import WhyUs from './components/Whyus';
 import Services from './components/Services';
 import Footer from './components/Footer';
 import Partners from './components/Partners';
+import PartnersSection from './components/PartnersSection';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Home />
         <Partners />
+        <PartnersSection />
         <About />
         <WhyUs />
         <Services />
