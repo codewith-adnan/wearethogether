@@ -6,7 +6,7 @@ import About from './components/About';
 import WhyUs from './components/Whyus';
 import Services from './components/Services';
 import Footer from './components/Footer';
-import Partners from './components/Partners';
+import Clients from './components/Clients';
 import PartnersSection from './components/PartnersSection';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <main>
         <Home />
-        <Partners />
+        <Clients />
         <PartnersSection />
         <About />
         <WhyUs />
