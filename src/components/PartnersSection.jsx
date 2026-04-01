@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Component, Globe, Triangle, Cpu, Network } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import partnerBg from '../assets/partner background.png';
+import logoBrandLines from '../assets/brand line.png';
+import logoRP from '../assets/rp.png';
+import logoGP from '../assets/gp cor.png';
+import logoSSK from '../assets/ssk.png';
+import logoELF from '../assets/elf.png';
+import logoHL from '../assets/hL.png';
+import logoBri from '../assets/the bri.png';
 
 const PartnersSection = () => {
   const partners = [
-    { id: 1, name: "INNOVATEX", desc: "Leading enterprise cloud provider and AI integration specialist.", icon: <Component size={40} className="text-blue-400" /> },
-    { id: 2, name: "GLOBALTECH", desc: "Leading enterprise cloud provider and AI integration specialist.", icon: <Globe size={40} className="text-blue-400" /> },
-    { id: 3, name: "APEX SOLUTIONS", desc: "Leading enterprise cloud provider and dynamic AI-driven solutions for global enterprises.", icon: <Triangle size={48} className="text-blue-500" /> },
-    { id: 4, name: "NEXUS DYNAMICS", desc: "Leading enterprise cloud provider and AI integration specialist.", icon: <Cpu size={40} className="text-blue-400" /> },
-    { id: 5, name: "SYNAPSE CO", desc: "Leading enterprise cloud provider and AI integration specialist.", icon: <Network size={40} className="text-blue-400" /> },
+    { id: 1, name: "Brand Lines Advertising", desc: "A key creative partner specializing in branding, outdoor advertising, and large-scale campaign execution — delivering high-impact marketing solutions.", logo: logoBrandLines },
+    { id: 2, name: "RP Solutions Pvt Ltd", desc: "Provides advanced IT and operational support, ensuring smooth system integration and efficient project management across all our operations.", logo: logoRP },
+    { id: 3, name: "GP Corporation Pvt Ltd", desc: "A reliable partner in industrial support and supply chain management, contributing significantly to the successful execution of large-scale projects.", logo: logoGP },
+    { id: 4, name: "SSK Builders Pvt Ltd", desc: "Our trusted partner in construction and infrastructure development, supporting commercial builds, site setups, and structural execution.", logo: logoSSK },
+    { id: 5, name: "AA Fabrications", desc: "Experts in custom fabrication and metal works, delivering high-quality on-ground installations, branding structures, and display solutions.", logo: logoELF },
+    { id: 6, name: "Hassan Digital Marketing", desc: "Our digital growth partner, specializing in social media management, paid advertising, and enhancing brand presence across digital platforms.", logo: logoHL },
+    { id: 7, name: "KB Tax & Corporate", desc: "Provides professional services in corporate compliance, taxation, and legal structuring to ensure smooth and secure business operations.", logo: logoBri },
   ];
 
   const [activeIndex, setActiveIndex] = useState(2);
@@ -135,8 +144,13 @@ const PartnersSection = () => {
                               : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/5 backdrop-blur-sm z-0'
                           } p-5 md:p-7`}
                       >
-                        <div className={`mb-5 p-4 rounded-full bg-slate-900/50 ${isActive ? 'ring-2 ring-blue-500/50' : ''}`}>
-                          {partner.icon}
+                        {/* Logo Image */}
+                        <div className={`mb-5 flex items-center justify-center ${isActive ? 'w-28 h-20' : 'w-20 h-14'} transition-all duration-400`}>
+                          <img
+                            src={partner.logo}
+                            alt={partner.name}
+                            className="max-h-full max-w-full object-contain drop-shadow-md"
+                          />
                         </div>
                         <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : isNear ? 'text-base text-slate-300' : 'text-sm text-slate-400'}`}>
                           {partner.name}
