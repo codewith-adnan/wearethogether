@@ -7,7 +7,7 @@ import logo from "../assets/watlogo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const navLinks = ["Home", "About", "Why Us", "Services", "Contact"];
+  const navLinks = ["Home", "About", "Why Us", "Services",];
 
   return (
     <nav className="fixed top-0 left-0 w-full z-[100] px-4 md:px-12 py-6 flex items-center justify-end pointer-events-none">
@@ -96,7 +96,7 @@ const Navbar = () => {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed inset-0 bg-white/95 backdrop-blur-3xl z-[100] flex flex-col items-center justify-center pointer-events-auto"
           >
-            <nav className="flex flex-col items-center gap-8">
+            <nav className="flex flex-col items-center gap-5 mt-20">
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link}
@@ -111,7 +111,7 @@ const Navbar = () => {
                     // offset={-70}
                     duration={1500}
                     easing="easeInOutQuart"
-                    className="text-3xl font-black tracking-widest uppercase text-gray-800 hover:text-blue-600 transition-all cursor-pointer"
+                    className="text-xl font-black tracking-widest uppercase text-gray-800 hover:text-blue-600 transition-all cursor-pointer"
                     onClick={() => setIsOpen(false)}
                   >
                     {link}

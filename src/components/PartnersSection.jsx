@@ -39,7 +39,7 @@ const PartnersSection = () => {
             viewport={{ once: true }}
             className="inline-block px-5 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6"
           >
-            <span className="text-[10px] md:text-xs font-extrabold tracking-[0.2em] text-blue-600 uppercase">
+            <span className="text-[8px] md:text-xs font-extrabold tracking-[0.2em] text-blue-600 uppercase">
               Our Global Partnership Ecosystem
             </span>
           </motion.div>
