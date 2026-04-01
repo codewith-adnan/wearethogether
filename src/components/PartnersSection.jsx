@@ -13,9 +13,20 @@ const PartnersSection = () => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(2);
+  const [direction, setDirection] = useState(0); // 1 = next (right→left), -1 = prev (left→right)
 
-  const nextSlide = () => setActiveIndex((prev) => (prev === partners.length - 1 ? 0 : prev + 1));
-  const prevSlide = () => setActiveIndex((prev) => (prev === 0 ? partners.length - 1 : prev - 1));
+  const nextSlide = () => {
+    setDirection(1);
+    setActiveIndex((prev) => (prev === partners.length - 1 ? 0 : prev + 1));
+  };
+  const prevSlide = () => {
+    setDirection(-1);
+    setActiveIndex((prev) => (prev === 0 ? partners.length - 1 : prev - 1));
+  };
+  const goTo = (index) => {
+    setDirection(index > activeIndex ? 1 : -1);
+    setActiveIndex(index);
+  };
 
   return (
     <div className="w-full font-sans">
@@ -73,7 +84,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 w-full max-w-7xl px-4 pt-40 md:pt-72 pb-20 flex flex-col items-center">
+        <div className="relative z-10 w-full max-w-7xl  md:px-4 pt-40 md:pt-72 pb-20 flex flex-col items-center">
 
           <div className="relative w-full flex items-center justify-center">
 
@@ -85,44 +96,59 @@ const PartnersSection = () => {
               <ChevronLeft />
             </button>
 
-            {/* 5-card centered layout: far-left | left | active | right | far-right */}
-            <div className="flex items-center justify-center gap-3 md:gap-4 py-10 w-full">
-              {[-2, -1, 0, 1, 2].map((offset) => {
-                const index = (activeIndex + offset + partners.length) % partners.length;
-                const partner = partners[index];
-                const isActive = offset === 0;
-                const isNear = Math.abs(offset) === 1;
-                const isFar  = Math.abs(offset) === 2;
-                return (
-                  <motion.div
-                    key={`${partner.id}-${offset}`}
-                    layout
-                    animate={{
-                      scale:   isActive ? 1.05 : isNear ? 0.92 : 0.80,
-                      opacity: isActive ? 1    : isNear ? 0.60 : 0.35,
-                    }}
-                    transition={{ duration: 0.4, ease: 'easeOut' }}
-                    onClick={() => setActiveIndex(index)}
-                    className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border-t border-white/20
-                      ${isActive
-                        ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/15 shadow-[0_0_50px_rgba(59,130,246,0.4)] backdrop-blur-xl z-20'
-                        : isNear
-                          ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/8 backdrop-blur-md z-10'
-                          : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/5 backdrop-blur-sm z-0'
-                      } p-5 md:p-7`}
-                  >
-                    <div className={`mb-5 p-4 rounded-full bg-slate-900/50 ${isActive ? 'ring-2 ring-blue-500/50' : ''}`}>
-                      {partner.icon}
-                    </div>
-                    <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : isNear ? 'text-base text-slate-300' : 'text-sm text-slate-400'}`}>
-                      {partner.name}
-                    </h3>
-                    <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
-                      {isActive || isNear ? partner.desc : ''}
-                    </p>
-                  </motion.div>
-                );
-              })}
+            {/* 5-card centered layout with slide animation */}
+            <div className="relative overflow-hidden w-full py-10">
+              <AnimatePresence initial={false} custom={direction} mode="popLayout">
+                <motion.div
+                  key={activeIndex}
+                  custom={direction}
+                  variants={{
+                    enter: (d) => ({ x: d > 0 ? '30%' : '-30%', opacity: 0 }),
+                    center: { x: 0, opacity: 1 },
+                    exit: (d) => ({ x: d > 0 ? '-30%' : '30%', opacity: 0 }),
+                  }}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                  transition={{ duration: 0.75, ease: [0.4, 0, 0.2, 1] }}
+                  className="flex items-center justify-center gap-3 md:gap-4"
+                >
+                  {[-2, -1, 0, 1, 2].map((offset) => {
+                    const index = (activeIndex + offset + partners.length) % partners.length;
+                    const partner = partners[index];
+                    const isActive = offset === 0;
+                    const isNear = Math.abs(offset) === 1;
+                    return (
+                      <div
+                        key={`${partner.id}-${offset}`}
+                        onClick={() => goTo(index)}
+                        style={{
+                          transform: `scale(${isActive ? 1.05 : isNear ? 0.92 : 0.80})`,
+                          opacity: isActive ? 1 : isNear ? 0.60 : 0.35,
+                          transition: 'transform 0.4s ease, opacity 0.4s ease',
+                        }}
+                        className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border-t border-white/20
+                          ${isActive
+                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/15 shadow-[0_0_50px_rgba(59,130,246,0.4)] backdrop-blur-xl z-20'
+                            : isNear
+                              ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/5 backdrop-blur-md z-10'
+                              : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/5 backdrop-blur-sm z-0'
+                          } p-5 md:p-7`}
+                      >
+                        <div className={`mb-5 p-4 rounded-full bg-slate-900/50 ${isActive ? 'ring-2 ring-blue-500/50' : ''}`}>
+                          {partner.icon}
+                        </div>
+                        <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : isNear ? 'text-base text-slate-300' : 'text-sm text-slate-400'}`}>
+                          {partner.name}
+                        </h3>
+                        <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
+                          {isActive || isNear ? partner.desc : ''}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </motion.div>
+              </AnimatePresence>
             </div>
 
             {/* Right Arrow */}
@@ -149,7 +175,7 @@ const PartnersSection = () => {
             {partners.map((_, index) => (
               <button
                 key={index}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => goTo(index)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-10 bg-blue-500' : 'w-4 bg-white/30 hover:bg-white/50'}`}
               />
             ))}
