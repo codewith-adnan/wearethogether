@@ -24,29 +24,27 @@ const Navbar = () => {
       {/* ---- Desktop Nav Rail ---- */}
       <div className="relative pointer-events-auto flex items-center gap-4 z-[101]">
         <div className="hidden lg:flex items-center capsule-nav">
-          <div className="flex items-center gap-10 px-10 py-1">
-            <div className="flex items-center gap-8">
-              {navLinks.slice(0, 4).map((link) => (
-                <MagneticButton key={link} distance={0.2}>
-                  <Link
-                    key={link}
-                    activeClass="active-capsule"
-                    to={link.toLowerCase().replace(" ", "-")}
-                    spy={true}
-                    smooth={true}
-                    // offset={-70}
-                    duration={1500}
-                    easing="easeInOutQuart"
-                    className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
-                  >
-                    <span className="fluid-text-container">
-                      <span className="fluid-text-item">{link}</span>
-                      <span className="fluid-text-item text-blue-600">{link}</span>
-                    </span>
-                  </Link>
-                </MagneticButton>
-              ))}
-            </div>
+          <div className="flex items-center gap-10 pl-10 pr-2 py-1.5">
+            {navLinks.slice(0, 4).map((link) => (
+              <MagneticButton key={link} distance={0.2}>
+                <Link
+                  key={link}
+                  activeClass="active-capsule"
+                  to={link.toLowerCase().replace(" ", "-")}
+                  spy={true}
+                  smooth={true}
+                  // offset={-70}
+                  duration={1500}
+                  easing="easeInOutQuart"
+                  className="nav-link text-[11px] font-extrabold tracking-[2px] uppercase text-gray-800 hover:text-blue-600 transition-colors cursor-pointer"
+                >
+                  <span className="fluid-text-container">
+                    <span className="fluid-text-item">{link}</span>
+                    <span className="fluid-text-item text-blue-600">{link}</span>
+                  </span>
+                </Link>
+              </MagneticButton>
+            ))}
 
             <MagneticButton distance={0.4}>
               <Link

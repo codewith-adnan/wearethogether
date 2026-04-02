@@ -57,14 +57,16 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+  transform: scale(1.02);
+  filter: brightness(1.1);
 }
 
 
 .glow-btn-wrapper:hover .glow-btn-inner {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
-  filter: brightness(1.1);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.6);
+  filter: brightness(1.2);
 }
 
 .glow-btn-wrapper:active .glow-btn-inner {
