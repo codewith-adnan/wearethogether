@@ -10,18 +10,18 @@ const About = () => {
     <section id="about" className="py-20 bg-white">
       {/* Container ko flexbox banayein taake do columns ban sakein */}
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-        
+
         {/* Left Column (Video) */}
-         <div className="md:w-1/2">
-            {/* 
+        <div className="md:w-1/2">
+          {/* 
               STEP 2: Yahan URL ki jagah import kiya hua variable istemal karein
             */}
-            <img 
-              src={professionalImage} 
-              alt="Professional Technician" 
-              className="rounded-lg shadow-xl"
-            />
-          </div>
+          <img
+            src={professionalImage}
+            alt="Professional Technician"
+            className="rounded-lg shadow-xl"
+          />
+        </div>
 
         {/* Right Column (Text Content) */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -34,7 +34,7 @@ const About = () => {
         </div>
 
       </div>
-      
+
     </section>
   );
 };

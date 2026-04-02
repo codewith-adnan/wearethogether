@@ -1,18 +1,18 @@
 // src/components/WhyUs.jsx
 
 import React from 'react';
-const aboutVideo = '/intorduction.mp4'; 
+const aboutVideo = '/intorduction.mp4';
 
 const WhyUs = () => {
   return (
     <section id="why-us" className="py-20 bg-blue-50">
       <div className="container mx-auto px-6">
-        
+
         <div className="flex flex-col md:flex-row-reverse items-center gap-10">
 
           <div className="md:w-1/2">
-            <video 
-              src={aboutVideo} 
+            <video
+              src={aboutVideo}
               autoPlay
               loop
               muted

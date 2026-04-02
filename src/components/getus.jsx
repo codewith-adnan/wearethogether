@@ -35,29 +35,29 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10">
           <div className="text-center md:text-left mt-[-25px] flex flex-col">
-  <img
-    src={logoImage}
-    className="h-14 w-auto mx-auto md:mx-0 filter brightness-2 invert"
-  />
+            <img
+              src={logoImage}
+              className="h-14 w-auto mx-auto md:mx-0 filter brightness-2 invert"
+            />
 
-  
-  <div className="flex justify-center  -mt-5 space-x-3">
-    <span style={{ color: '#f39c12', fontWeight: 'bold' }}>w</span>
-    <span style={{ color: '#945708', fontWeight: 'bold' }}>e</span>
-    <span className="mx-1 gap-5"></span> 
-    <span style={{ color: '#dcf0a4', fontWeight: 'bold' }}>a</span>
-    <span style={{ color: '#e74c3c', fontWeight: 'bold' }}>r</span>
-    <span style={{ color: '#2ecc71', fontWeight: 'bold' }}>e</span>
-  </div>
-  
-  <p className="text-gray-400 text-sm mt-4 w-[250px] mx-auto md:mx-0 text-justify">
-    Delivering more than just services — we deliver peace of mind.
-    <br />
-    Your trusted partner for technical solutions. At The Technical
-    Doctors, every technician is a certified diploma holder with over
-    five years of hands-on experience.
-  </p>
-</div>
+
+            <div className="flex justify-center  -mt-5 space-x-3">
+              <span style={{ color: '#f39c12', fontWeight: 'bold' }}>w</span>
+              <span style={{ color: '#945708', fontWeight: 'bold' }}>e</span>
+              <span className="mx-1 gap-5"></span>
+              <span style={{ color: '#dcf0a4', fontWeight: 'bold' }}>a</span>
+              <span style={{ color: '#e74c3c', fontWeight: 'bold' }}>r</span>
+              <span style={{ color: '#2ecc71', fontWeight: 'bold' }}>e</span>
+            </div>
+
+            <p className="text-gray-400 text-sm mt-4 w-[250px] mx-auto md:mx-0 text-justify">
+              Delivering more than just services — we deliver peace of mind.
+              <br />
+              Your trusted partner for technical solutions. At The Technical
+              Doctors, every technician is a certified diploma holder with over
+              five years of hands-on experience.
+            </p>
+          </div>
 
           <div className="text-center">
             <h2 className="text-1xl font-semibold mb-3 uppercase">Stay Connected</h2>
@@ -95,7 +95,7 @@ const Contact = () => {
             </div>
             <div className="text-gray-300 my-6 space-y-3">
               <div className="relative flex items-center justify-center md:justify-start gap-3 cursor-pointer group"
-                   onClick={handleCopy}>
+                onClick={handleCopy}>
                 <FaPhone />
                 <span>0317 - 3284147</span>
                 {copied && (
