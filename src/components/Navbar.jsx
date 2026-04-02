@@ -13,10 +13,10 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 w-full z-[100] px-4 md:px-12 py-6 flex items-center justify-end pointer-events-none">
 
       {/* ---- Logo & Branding ---- */}
-      <div className="absolute left-6 md:left-12  flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
+      <div className="absolute left-2 md:left-12  flex flex-col items-center pointer-events-auto cursor-pointer group z-[101]">
         <img
           src={logo}
-          className="h-24 md:h-34 lg:h-36 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
+          className="h-32 md:h-34 lg:h-36 w-auto drop-shadow-sm transition-transform duration-500 group-hover:scale-105"
           alt="WAT Logo"
         />
       </div>

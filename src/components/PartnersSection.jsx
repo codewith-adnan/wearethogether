@@ -131,8 +131,8 @@ const PartnersSection = () => {
                           transition: 'transform 0.4s ease, opacity 0.4s ease',
                         }}
                         className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border border-white/5
-                          ${isActive
-                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/5 shadow-[0_0_60px_rgba(0,0,170,0.5)] z-20'
+                          ${isActive
+                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/4 shadow-[0_0_60px_rgba(0,0,170,0.5)] backdrop-blur-md z-20'
                             : isNear
                               ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/3 z-10'
                               : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/2 z-0'
@@ -143,10 +143,10 @@ const PartnersSection = () => {
                           <img
                             src={partner.logo}
                             alt={partner.name}
-                            className="max-h-full max-w-full object-contain"
+                            className={`max-h-full max-w-full object-contain transition-transform duration-300 ${partner.id === 1 ? 'scale-150' : ''}`}
                           />
                         </div>
-                        <h3 className={`font-bold tracking-wide mb-3 ${isActive ? 'text-xl md:text-2xl text-white' : 'text-base text-slate-300'}`}>
+                        <h3 className={`font-bold tracking-wide mb-3 whitespace-nowrap ${isActive ? 'text-[1.1rem] md:text-xl text-white' : 'text-xs md:text-sm text-slate-300'}`}>
                           {partner.name}
                         </h3>
                         <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>

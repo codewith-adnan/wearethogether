@@ -71,9 +71,9 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed text-justify"
+            className="mt-6 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed text-center"
           >
-            Delivering more than just services—we deliver peace of mind. <br className="hidden md:block" />
+            Delivering more than just services—we deliver peace of mind.
             Your trusted partner for cinematic technical solutions.
           </motion.p>
 
@@ -91,8 +91,10 @@ const Home = () => {
                 easing="easeInOutQuart"
                 className="glow-btn-wrapper"
               >
-                <div className="glow-btn-inner px-12 py-5 text-sm">
-                  Explore Our Services
+                <div className=" mb-2">
+                  <button className="px-6 py-3 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm sm:text-base shadow-lg shadow-blue-500/30 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50 active:scale-95">
+                    EXPLORE OUR SERVICES
+                  </button>
                 </div>
               </Link>
             </MagneticButton>
