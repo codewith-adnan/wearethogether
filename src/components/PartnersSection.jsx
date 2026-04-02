@@ -130,14 +130,18 @@ const PartnersSection = () => {
                           opacity: isActive ? 1 : isNear ? 0.60 : 0.35,
                           transition: 'transform 0.4s ease, opacity 0.4s ease',
                         }}
-                        className={`shrink-0 flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border border-white/5
+                        className={`shrink-0 relative flex flex-col items-center justify-center text-center rounded-3xl cursor-pointer border border-white/5
                           ${isActive
-                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/4 shadow-[0_0_60px_rgba(0,0,170,0.5)] backdrop-blur-md z-20'
+                            ? 'w-[260px] md:w-72 h-[370px] md:h-[400px] bg-white/5 backdrop-blur-md z-20'
                             : isNear
                               ? 'w-[200px] md:w-60 h-[300px] md:h-[340px] bg-white/3 z-10'
                               : 'hidden md:flex w-[160px] md:w-48 h-[260px] md:h-[300px] bg-white/2 z-0'
                           } p-5 md:p-7`}
                       >
+                        {/* Gradient Glow Shadow for Active Card */}
+                        {isActive && (
+                          <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/40 to-blue-600/50 blur-3xl rounded-full -z-10 animate-pulse" />
+                        )}
                         {/* Logo Image - No background on image itself */}
                         <div className={`mb-5 flex items-center justify-center ${isActive ? 'w-28 h-20' : 'w-20 h-14'} transition-all duration-400`}>
                           <img
