@@ -92,7 +92,7 @@ const Home = () => {
                 className="glow-btn-wrapper"
               >
                 <div className=" mb-2">
-                  <button className="px-6 py-3 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm sm:text-base shadow-lg shadow-blue-500/30 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/50 active:scale-95">
+                  <button className="px-6 py-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm sm:text-base shadow-lg shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95">
                     EXPLORE OUR SERVICES
                   </button>
                 </div>

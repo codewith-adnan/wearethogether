@@ -48,7 +48,7 @@
 }
 
 .glow-btn-inner {
-  background: var(--logo-gradient);
+  background: linear-gradient(to right, #14b8a6, #2563eb);
   color: white;
   padding: 10px 24px;
   border-radius: 100px;
@@ -57,12 +57,13 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 4px 15px rgba(3, 63, 102, 0.2);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
 }
+
 
 .glow-btn-wrapper:hover .glow-btn-inner {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(3, 63, 102, 0.4);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
   filter: brightness(1.1);
 }
 
