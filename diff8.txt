@@ -1,0 +1,453 @@
+﻿diff --git a/src/assets/1.jpeg b/src/assets/1.jpeg
+deleted file mode 100644
+index d4cf10a..0000000
+Binary files a/src/assets/1.jpeg and /dev/null differ
+diff --git a/src/assets/10.jpeg b/src/assets/10.jpeg
+deleted file mode 100644
+index 84b7dfb..0000000
+Binary files a/src/assets/10.jpeg and /dev/null differ
+diff --git a/src/assets/11.jpeg b/src/assets/11.jpeg
+deleted file mode 100644
+index 83c1286..0000000
+Binary files a/src/assets/11.jpeg and /dev/null differ
+diff --git a/src/assets/12.jpeg b/src/assets/12.jpeg
+deleted file mode 100644
+index c086389..0000000
+Binary files a/src/assets/12.jpeg and /dev/null differ
+diff --git a/src/assets/13.jpeg b/src/assets/13.jpeg
+deleted file mode 100644
+index c8114d9..0000000
+Binary files a/src/assets/13.jpeg and /dev/null differ
+diff --git a/src/assets/14.jpeg b/src/assets/14.jpeg
+deleted file mode 100644
+index f2fb1a2..0000000
+Binary files a/src/assets/14.jpeg and /dev/null differ
+diff --git a/src/assets/15.jpeg b/src/assets/15.jpeg
+deleted file mode 100644
+index fdbdf01..0000000
+Binary files a/src/assets/15.jpeg and /dev/null differ
+diff --git a/src/assets/16.jpeg b/src/assets/16.jpeg
+deleted file mode 100644
+index 40277d3..0000000
+Binary files a/src/assets/16.jpeg and /dev/null differ
+diff --git a/src/assets/17.jpeg b/src/assets/17.jpeg
+deleted file mode 100644
+index 7b92413..0000000
+Binary files a/src/assets/17.jpeg and /dev/null differ
+diff --git a/src/assets/18.jpeg b/src/assets/18.jpeg
+deleted file mode 100644
+index 24d10aa..0000000
+Binary files a/src/assets/18.jpeg and /dev/null differ
+diff --git a/src/assets/2.jpeg b/src/assets/2.jpeg
+deleted file mode 100644
+index 8447faa..0000000
+Binary files a/src/assets/2.jpeg and /dev/null differ
+diff --git a/src/assets/20.jpeg b/src/assets/20.jpeg
+deleted file mode 100644
+index 90be228..0000000
+Binary files a/src/assets/20.jpeg and /dev/null differ
+diff --git a/src/assets/21.jpeg b/src/assets/21.jpeg
+deleted file mode 100644
+index 2c55855..0000000
+Binary files a/src/assets/21.jpeg and /dev/null differ
+diff --git a/src/assets/3.jpeg b/src/assets/3.jpeg
+deleted file mode 100644
+index f270eb2..0000000
+Binary files a/src/assets/3.jpeg and /dev/null differ
+diff --git a/src/assets/4.jpeg b/src/assets/4.jpeg
+deleted file mode 100644
+index 580d773..0000000
+Binary files a/src/assets/4.jpeg and /dev/null differ
+diff --git a/src/assets/5.jpeg b/src/assets/5.jpeg
+deleted file mode 100644
+index 3d7ce85..0000000
+Binary files a/src/assets/5.jpeg and /dev/null differ
+diff --git a/src/assets/6.jpeg b/src/assets/6.jpeg
+deleted file mode 100644
+index 47fe4da..0000000
+Binary files a/src/assets/6.jpeg and /dev/null differ
+diff --git a/src/assets/7.jpeg b/src/assets/7.jpeg
+deleted file mode 100644
+index 04a1cd7..0000000
+Binary files a/src/assets/7.jpeg and /dev/null differ
+diff --git a/src/assets/8.jpeg b/src/assets/8.jpeg
+deleted file mode 100644
+index 9718580..0000000
+Binary files a/src/assets/8.jpeg and /dev/null differ
+diff --git a/src/assets/9.jpeg b/src/assets/9.jpeg
+deleted file mode 100644
+index 084e08f..0000000
+Binary files a/src/assets/9.jpeg and /dev/null differ
+diff --git a/src/assets/Home.jpeg b/src/assets/Home.jpeg
+deleted file mode 100644
+index bc4270d..0000000
+Binary files a/src/assets/Home.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.47 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.47 PM.jpeg
+deleted file mode 100644
+index d5bb2b7..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.47 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.48 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.48 PM.jpeg
+deleted file mode 100644
+index d6753cb..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.48 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM (1).jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM (1).jpeg
+deleted file mode 100644
+index 195cbc7..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM (1).jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM.jpeg
+deleted file mode 100644
+index 3052a0d..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.50 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.50 PM.jpeg
+deleted file mode 100644
+index 7031462..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.50 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.55 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.55 PM.jpeg
+deleted file mode 100644
+index cd9cd9f..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.55 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.56 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.56 PM.jpeg
+deleted file mode 100644
+index 320eb8f..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.56 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.56.57 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.56.57 PM.jpeg
+deleted file mode 100644
+index 1482f85..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.56.57 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM (1).jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM (1).jpeg
+deleted file mode 100644
+index 893406d..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM (1).jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM.jpeg
+deleted file mode 100644
+index 6777ef9..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.03 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.03 PM.jpeg
+deleted file mode 100644
+index cdefe0b..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.03 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.12 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.12 PM.jpeg
+deleted file mode 100644
+index 726c52e..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.12 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.23 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.23 PM.jpeg
+deleted file mode 100644
+index c491f3d..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.23 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2025-09-28 at 1.57.24 PM.jpeg b/src/assets/WhatsApp Image 2025-09-28 at 1.57.24 PM.jpeg
+deleted file mode 100644
+index 07175b6..0000000
+Binary files a/src/assets/WhatsApp Image 2025-09-28 at 1.57.24 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.40.00 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.40.00 PM.jpeg
+deleted file mode 100644
+index b903de5..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.40.00 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.43.49 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.43.49 PM.jpeg
+deleted file mode 100644
+index cdecb25..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.43.49 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM (2).jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM (2).jpeg
+deleted file mode 100644
+index fdbdf01..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM (2).jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM.jpeg
+deleted file mode 100644
+index fdb2622..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.43.51 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.43.51 PM.jpeg
+deleted file mode 100644
+index 22d4e66..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.43.51 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 10.43.52 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 10.43.52 PM.jpeg
+deleted file mode 100644
+index 1a3d665..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 10.43.52 PM.jpeg and /dev/null differ
+diff --git a/src/assets/WhatsApp Image 2026-03-28 at 11.06.11 PM.jpeg b/src/assets/WhatsApp Image 2026-03-28 at 11.06.11 PM.jpeg
+deleted file mode 100644
+index 427a3ad..0000000
+Binary files a/src/assets/WhatsApp Image 2026-03-28 at 11.06.11 PM.jpeg and /dev/null differ
+diff --git a/src/assets/askari.jpg b/src/assets/askari.jpg
+deleted file mode 100644
+index c02a716..0000000
+--- a/src/assets/askari.jpg
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:9ca99677548ba49adac5f2fe9586a91b52ca017820c0b17950bdeab994fcb561
+-size 9004
+diff --git a/src/assets/brand line.png b/src/assets/brand line.png
+deleted file mode 100644
+index 0eceb1a..0000000
+--- a/src/assets/brand line.png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:c2caa852375408f84dbc3bdf678907412e1afddde0f36d1d30fce99a4d01a567
+-size 54390
+diff --git a/src/assets/download (1).png b/src/assets/download (1).png
+deleted file mode 100644
+index 7754d4d..0000000
+--- a/src/assets/download (1).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:dbbfc50dd2b594d0fd48ab66d7beb2b6c0d253093b22c416d939d31c9fc9541f
+-size 3936
+diff --git a/src/assets/download (2).png b/src/assets/download (2).png
+deleted file mode 100644
+index fe85331..0000000
+--- a/src/assets/download (2).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:26e29bface505e521191c7b6d8a6ff79e6ac6bd1812f452c071b5af1c9edb6e6
+-size 3639
+diff --git a/src/assets/download (3).png b/src/assets/download (3).png
+deleted file mode 100644
+index 80c95dd..0000000
+--- a/src/assets/download (3).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:662b96fd15ec9fefeedc8596aaca86f82bfbdf24a62ece13d1c142ba5c3c66d9
+-size 3881
+diff --git a/src/assets/download (4).png b/src/assets/download (4).png
+deleted file mode 100644
+index 35831df..0000000
+--- a/src/assets/download (4).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:b15ec3eb91e9e310f6467527c6bfe4ba5c93cde0bee4397d299573e5c2cc4850
+-size 9898
+diff --git a/src/assets/download (5).png b/src/assets/download (5).png
+deleted file mode 100644
+index 99e352f..0000000
+--- a/src/assets/download (5).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:04074b5bc5252af51e073aaac4b177f97a84de3aeadf8c2323b092b73f74ddc4
+-size 7287
+diff --git a/src/assets/download (6).png b/src/assets/download (6).png
+deleted file mode 100644
+index 55decfa..0000000
+--- a/src/assets/download (6).png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:c7e2ff949be5ba5f5b3d5bedb11be9f24f98cc91db89445b38475a78c8b4b6d0
+-size 4445
+diff --git a/src/assets/download.png b/src/assets/download.png
+deleted file mode 100644
+index a7f603f..0000000
+--- a/src/assets/download.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:0f4d72e41c55cb495b3c7400b2c690f35bce9f25c7b168f430f126e568fde769
+-size 8732
+diff --git a/src/assets/elf.png b/src/assets/elf.png
+deleted file mode 100644
+index 25515b6..0000000
+--- a/src/assets/elf.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:319cf412b8d90953e2802a6672f68a0cfb62c808f16084293b43c9fdcee2c5ee
+-size 108862
+diff --git a/src/assets/gp cor.png b/src/assets/gp cor.png
+deleted file mode 100644
+index a329160..0000000
+--- a/src/assets/gp cor.png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:febd5bc3a07beee71c5c37d02fcd84b5f875e656f01a643fc413ee84799d77e3
+-size 91814
+diff --git a/src/assets/hL.png b/src/assets/hL.png
+deleted file mode 100644
+index 698b926..0000000
+--- a/src/assets/hL.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:3d1cfbaf25cafa0dc6aeeb1b6e4e84ceddfc27d380a70d46797088e4a8f43769
+-size 20355
+diff --git a/src/assets/image.png b/src/assets/image.png
+deleted file mode 100644
+index e8545cc..0000000
+--- a/src/assets/image.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:2cd9ee8b582710999d359242b771e98e87edf0f96fed7e1e76fb2d753b029017
+-size 508447
+diff --git a/src/assets/main.png b/src/assets/main.png
+deleted file mode 100644
+index fd49ce4..0000000
+--- a/src/assets/main.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:8f70de3d6ce4bca71dcee4935ac3dcc9660d005a44050284248dc036882cbac8
+-size 364352
+diff --git a/src/assets/national.png b/src/assets/national.png
+deleted file mode 100644
+index 33abcdc..0000000
+--- a/src/assets/national.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:09e6cd008855e920a3ca22c430d7e9ebc82317d495c54fe938c2e19b54e74d5c
+-size 3928
+diff --git a/src/assets/partner background.png b/src/assets/partner background.png
+deleted file mode 100644
+index 4944c18..0000000
+--- a/src/assets/partner background.png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:bc6255f615268f7514e7fdf0082dc7d40580eacfad6b48fe131bff00442221a6
+-size 6445257
+diff --git a/src/assets/qr.png b/src/assets/qr.png
+deleted file mode 100644
+index cd0a923..0000000
+--- a/src/assets/qr.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:baa89e06cb9e9c35b0a0fcd59d01e4d2b6d135bdaf83d8c31c5834d249a07385
+-size 1554
+diff --git a/src/assets/rp.png b/src/assets/rp.png
+deleted file mode 100644
+index de686fa..0000000
+--- a/src/assets/rp.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:4d382bd4445e7696d2dcea06012387258db7a30f190274638a522747c87f9d5b
+-size 133089
+diff --git a/src/assets/ssk.png b/src/assets/ssk.png
+deleted file mode 100644
+index 28fef99..0000000
+--- a/src/assets/ssk.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:6775b7ee5854c34df7e974f9ebd4d2b64cd9df8c081f07a9e8aeade1cc7c3730
+-size 137218
+diff --git a/src/assets/the bri.png b/src/assets/the bri.png
+deleted file mode 100644
+index 3fdcbd0..0000000
+--- a/src/assets/the bri.png	
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:b555900ebee67cab7bf56ccc56f08fdf73589a4447b3f0a36867551a36183848
+-size 96712
+diff --git a/src/assets/watlogo.png b/src/assets/watlogo.png
+deleted file mode 100644
+index 6528252..0000000
+--- a/src/assets/watlogo.png
++++ /dev/null
+@@ -1,3 +0,0 @@
+-version https://git-lfs.github.com/spec/v1
+-oid sha256:f41eb9466fecc18363863325fb94e72ba5e25d797f0f3db84e75d037232cf81f
+-size 1428755
+diff --git a/src/assets/whyus.jpeg b/src/assets/whyus.jpeg
+deleted file mode 100644
+index 0c3e7aa..0000000
+Binary files a/src/assets/whyus.jpeg and /dev/null differ
+diff --git a/src/components/About.jsx b/src/components/About.jsx
+index 1444cd6..db12a77 100644
+--- a/src/components/About.jsx
++++ b/src/components/About.jsx
+@@ -3,7 +3,7 @@
+ import React from 'react';
+ 
+ // STEP 1: Apni video file ko yahan import karein
+-import professionalImage from '../assets/whyus.jpeg';
++import professionalImage from '../assets/whyus.jfif';
+ 
+ const About = () => {
+   return (
+diff --git a/src/components/Clients.jsx b/src/components/Clients.jsx
+index a3d286b..6ad4804 100644
+--- a/src/components/Clients.jsx
++++ b/src/components/Clients.jsx
+@@ -3,14 +3,14 @@ import React from 'react';
+ import { motion } from 'framer-motion';
+ 
+ // Import logos from assets
+-import logo1 from '../assets/download.png';
+-import logo2 from '../assets/download (1).png';
+-import logo3 from '../assets/download (2).png';
++import logo1 from '../assets/download.jfif';
++import logo2 from '../assets/download-1-.jfif';
++import logo3 from '../assets/download-2-.jfif';
+ import logo4 from '../assets/Wall\'s_Logo.svg';
+-import logo5 from '../assets/download (4).png';
+-import logo6 from '../assets/national.png';
+-import logo7 from '../assets/download (6).png';
+-import logo8 from '../assets/askari.jpg';
++import logo5 from '../assets/download-4-.jfif';
++import logo6 from '../assets/national.jfif';
++import logo7 from '../assets/download-6-.jfif';
++import logo8 from '../assets/askari.jfif';
+ 
+ const Partners = () => {
+   const partners = [
+diff --git a/src/components/Footer.jsx b/src/components/Footer.jsx
+index ca1429f..753ce97 100644
+--- a/src/components/Footer.jsx
++++ b/src/components/Footer.jsx
+@@ -10,7 +10,7 @@ import {
+   FaWhatsapp,
+ } from 'react-icons/fa';
+ import MagneticButton from './MagneticButton';
+-import logo from "../assets/watlogo.png";
++import logo from "../assets/watlogo.jfif";
+ 
+ const Footer = () => {
+   const scrollToTop = () => {
+diff --git a/src/components/Navbar.jsx b/src/components/Navbar.jsx
+index 7217860..fb89c42 100644
+--- a/src/components/Navbar.jsx
++++ b/src/components/Navbar.jsx
+@@ -2,7 +2,7 @@ import React from "react";
+ import { Link } from "react-scroll";
+ import { motion, AnimatePresence } from "framer-motion";
+ import MagneticButton from "./MagneticButton";
+-import logo from "../assets/watlogo.png";
++import logo from "../assets/watlogo.jfif";
+ 
+ const Navbar = () => {
+   const [isOpen, setIsOpen] = React.useState(false);
+diff --git a/src/components/PartnersSection.jsx b/src/components/PartnersSection.jsx
+index 8d1fddd..9b83952 100644
+--- a/src/components/PartnersSection.jsx
++++ b/src/components/PartnersSection.jsx
+@@ -2,14 +2,14 @@ import React, { useState } from 'react';
+ import { motion, AnimatePresence } from 'framer-motion';
+ import { ChevronLeft, ChevronRight } from 'lucide-react';
+ // Import only logos
+-import logoBrandLines from '../assets/brand line.png';
+-import logoRP from '../assets/rp.png';
+-import logoGP from '../assets/gp cor.png';
+-import logoSSK from '../assets/ssk.png';
+-import logoELF from '../assets/elf.png';
+-import logoHL from '../assets/hL.png';
+-import logoBri from '../assets/the bri.png';
+-import bgImage from '../assets/partner background.png';
++import logoBrandLines from '../assets/brand-line.jfif';
++import logoRP from '../assets/rp.jfif';
++import logoGP from '../assets/gp-cor.jfif';
++import logoSSK from '../assets/ssk.jfif';
++import logoELF from '../assets/elf.jfif';
++import logoHL from '../assets/hl.jfif';
++import logoBri from '../assets/the-bri.jfif';
++import bgImage from '../assets/partner-background.jfif';
+ 
+ const PartnersSection = () => {
+   const partners = [

@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react';
 
-import electricalImage from '../assets/electritcian.jfif';
-import paintingImage from '../assets/carpentry.jfif';
-import applianceImage from '../assets/install.jfif';
-import cctvImage from '../assets/cctv.jfif';
-import carpentryImage from '../assets/ceilling.jfif';
-import itImage from '../assets/it.jfif';
-import realEstateImage from '../assets/real.jfif';
+const electricalImage = '/electritcian.jfif';
+const paintingImage = '/carpentry.jfif';
+const applianceImage = '/install.jfif';
+const cctvImage = '/cctv.jfif';
+const carpentryImage = '/ceilling.jfif';
+const itImage = '/it.jfif';
+const realEstateImage = '/real.jfif';
 
 const servicesData = [
   {

@@ -1,7 +1,7 @@
 
 
 import React, { useState } from "react";
-import logoImage from "../assets/together.svg";
+const logoImage = "/together.svg";
 import {
   FaPhone,
   FaEnvelope,

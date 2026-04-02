@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import MagneticButton from "./MagneticButton";
-import logo from "../assets/watlogo.png";
+const logo = "/watlogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);

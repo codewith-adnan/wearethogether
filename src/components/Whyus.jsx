@@ -1,7 +1,7 @@
 // src/components/WhyUs.jsx
 
 import React from 'react';
-import aboutVideo from '../assets/intorduction.mp4'; 
+const aboutVideo = '/intorduction.mp4'; 
 
 const WhyUs = () => {
   return (

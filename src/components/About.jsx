@@ -3,7 +3,7 @@
 import React from 'react';
 
 // STEP 1: Apni video file ko yahan import karein
-import professionalImage from '../assets/whyus.jpeg';
+const professionalImage = '/whyus.jpeg';
 
 const About = () => {
   return (

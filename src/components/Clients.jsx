@@ -3,14 +3,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Import logos from assets
-import logo1 from '../assets/download.png';
-import logo2 from '../assets/download (1).png';
-import logo3 from '../assets/download (2).png';
-import logo4 from '../assets/Wall\'s_Logo.svg';
-import logo5 from '../assets/download (4).png';
-import logo6 from '../assets/national.png';
-import logo7 from '../assets/download (6).png';
-import logo8 from '../assets/askari.jpg';
+const logo1 = '/download.png';
+const logo2 = '/download (1).png';
+const logo3 = '/download (2).png';
+const logo4 = '/Wall\'s_Logo.svg';
+const logo5 = '/download (4).png';
+const logo6 = '/national.png';
+const logo7 = '/download (6).png';
+const logo8 = '/askari.jpg';
 
 const Partners = () => {
   const partners = [

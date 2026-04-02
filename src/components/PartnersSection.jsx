@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 // Import only logos
-import logoBrandLines from '../assets/brand line.png';
-import logoRP from '../assets/rp.png';
-import logoGP from '../assets/gp cor.png';
-import logoSSK from '../assets/ssk.png';
-import logoELF from '../assets/elf.png';
-import logoHL from '../assets/hL.png';
-import logoBri from '../assets/the bri.png';
-import bgImage from '../assets/partner background.png';
+const logoBrandLines = '/brand line.png';
+const logoRP = '/rp.png';
+const logoGP = '/gp cor.png';
+const logoSSK = '/ssk.png';
+const logoELF = '/elf.png';
+const logoHL = '/hL.png';
+const logoBri = '/the bri.png';
+const bgImage = '/partner background.png';
 
 const PartnersSection = () => {
   const partners = [
@@ -79,12 +79,12 @@ const PartnersSection = () => {
       </div>
 
       {/* ── LOGO & CAROUSEL SECTION ── */}
-      <div 
+      <div
         className="relative w-full min-h-[600px] md:min-h-screen flex flex-col items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat text-white"
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{ backgroundImage: `url('${bgImage}')` }}
       >
         {/* Semi-transparent overlay to ensure text/logos remain readable */}
-        <div className="absolute inset-0 z-0 bg-[rgba(17,17,17,0.7)]" />
+        <div className="absolute inset-0 z-0 bg-[rgba(80, 79, 79, 0.7)]" />
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-7xl md:px-4 pt-32 md:pt-48 pb-16 flex flex-col items-center">

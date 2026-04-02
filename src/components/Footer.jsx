@@ -10,7 +10,7 @@ import {
   FaWhatsapp,
 } from 'react-icons/fa';
 import MagneticButton from './MagneticButton';
-import logo from "../assets/watlogo.png";
+const logo = "/watlogo.png";
 
 const Footer = () => {
   const scrollToTop = () => {

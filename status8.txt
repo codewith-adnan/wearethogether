@@ -1,0 +1,134 @@
+﻿ D src/assets/1.jpeg
+ D src/assets/10.jpeg
+ D src/assets/11.jpeg
+ D src/assets/12.jpeg
+ D src/assets/13.jpeg
+ D src/assets/14.jpeg
+ D src/assets/15.jpeg
+ D src/assets/16.jpeg
+ D src/assets/17.jpeg
+ D src/assets/18.jpeg
+ D src/assets/2.jpeg
+ D src/assets/20.jpeg
+ D src/assets/21.jpeg
+ D src/assets/3.jpeg
+ D src/assets/4.jpeg
+ D src/assets/5.jpeg
+ D src/assets/6.jpeg
+ D src/assets/7.jpeg
+ D src/assets/8.jpeg
+ D src/assets/9.jpeg
+ D src/assets/Home.jpeg
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.47 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.48 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM (1).jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.49 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.50 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.55 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.56 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.56.57 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM (1).jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.00 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.03 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.12 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.23 PM.jpeg"
+ D "src/assets/WhatsApp Image 2025-09-28 at 1.57.24 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.40.00 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.43.49 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM (2).jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.43.50 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.43.51 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 10.43.52 PM.jpeg"
+ D "src/assets/WhatsApp Image 2026-03-28 at 11.06.11 PM.jpeg"
+ D src/assets/askari.jpg
+ D "src/assets/brand line.png"
+ D "src/assets/download (1).png"
+ D "src/assets/download (2).png"
+ D "src/assets/download (3).png"
+ D "src/assets/download (4).png"
+ D "src/assets/download (5).png"
+ D "src/assets/download (6).png"
+ D src/assets/download.png
+ D src/assets/elf.png
+ D "src/assets/gp cor.png"
+ D src/assets/hL.png
+ D src/assets/image.png
+ D src/assets/main.png
+ D src/assets/national.png
+ D "src/assets/partner background.png"
+ D src/assets/qr.png
+ D src/assets/rp.png
+ D src/assets/ssk.png
+ D "src/assets/the bri.png"
+ D src/assets/watlogo.png
+ D src/assets/whyus.jpeg
+ M src/components/About.jsx
+ M src/components/Clients.jsx
+ M src/components/Footer.jsx
+ M src/components/Navbar.jsx
+ M src/components/PartnersSection.jsx
+?? src/assets/1.jfif
+?? src/assets/10.jfif
+?? src/assets/11.jfif
+?? src/assets/12.jfif
+?? src/assets/13.jfif
+?? src/assets/14.jfif
+?? src/assets/15.jfif
+?? src/assets/16.jfif
+?? src/assets/17.jfif
+?? src/assets/18.jfif
+?? src/assets/2.jfif
+?? src/assets/20.jfif
+?? src/assets/21.jfif
+?? src/assets/3.jfif
+?? src/assets/4.jfif
+?? src/assets/5.jfif
+?? src/assets/6.jfif
+?? src/assets/7.jfif
+?? src/assets/8.jfif
+?? src/assets/9.jfif
+?? src/assets/askari.jfif
+?? src/assets/brand-line.jfif
+?? src/assets/download-1-.jfif
+?? src/assets/download-2-.jfif
+?? src/assets/download-3-.jfif
+?? src/assets/download-4-.jfif
+?? src/assets/download-5-.jfif
+?? src/assets/download-6-.jfif
+?? src/assets/download.jfif
+?? src/assets/elf.jfif
+?? src/assets/gp-cor.jfif
+?? src/assets/hl.jfif
+?? src/assets/home.jfif
+?? src/assets/image.jfif
+?? src/assets/main.jfif
+?? src/assets/national.jfif
+?? src/assets/partner-background.jfif
+?? src/assets/qr.jfif
+?? src/assets/rp.jfif
+?? src/assets/ssk.jfif
+?? src/assets/the-bri.jfif
+?? src/assets/watlogo.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-47-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-48-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-49-pm-1-.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-49-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-50-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-55-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-56-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-56-57-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-00-pm-1-.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-00-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-03-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-12-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-23-pm.jfif
+?? src/assets/whatsapp-image-2025-09-28-at-1-57-24-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-40-00-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-43-49-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-43-50-pm-2-.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-43-50-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-43-51-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-10-43-52-pm.jfif
+?? src/assets/whatsapp-image-2026-03-28-at-11-06-11-pm.jfif
+?? src/assets/whyus.jfif
+?? status.txt
