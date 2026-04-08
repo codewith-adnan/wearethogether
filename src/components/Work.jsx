@@ -3,31 +3,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import MagneticButton from './MagneticButton';
 
 const workProjects = [
-  { id: 1, image: '/1.jpeg', title: 'Modern Living Space', description: 'A complete interior renovation focusing on open-concept design and natural lighting.' },
-  { id: 2, image: '/2.jpeg', title: 'Commercial Office Suite', description: 'Modernizing a corporate workspace with ergonomic designs and smart technology integration.' },
-  { id: 3, image: '/3.jpeg', title: 'Premium Kitchen Remodel', description: 'State-of-the-art kitchen upgrade with custom cabinetry and luxury finishes.' },
-  { id: 4, image: '/4.jpeg', title: 'Smart Home Installation', description: 'Full-scale automation for lighting, security, and climate control.' },
-  { id: 5, image: '/5.jpeg', title: 'Exterior Facade Design', description: 'Revitalizing the architectural character with modern sustainable materials.' },
-  { id: 6, image: '/6.jpeg', title: 'Luxury Bathroom Spa', description: 'Transforming a standard bathroom into a high-end relaxing spa retreat.' },
-  { id: 7, image: '/7.jpeg', title: 'Custom Flooring Project', description: 'Precision installation of premium hardwood flooring across multiple levels.' },
-  { id: 8, image: '/8.jpeg', title: 'Electrical System Overhaul', description: 'Comprehensive rewiring and panel upgrade for a historical residence.' },
-  { id: 9, image: '/9.jpeg', title: 'Wall Decor & Painting', description: 'Artistic wall treatments and professional color consulting for vibrant spaces.' },
-  { id: 10, image: '/10.jpeg', title: 'Garden Terrace Build', description: 'Designing and building a functional and aesthetic outdoor living area.' },
-  { id: 11, image: '/11.jpeg', title: 'Basement Conversion', description: 'Converting an unused basement into a professional home cinema and gym.' },
-  { id: 12, image: '/12.jpeg', title: 'Retail Space Build-out', description: 'Full interior fit-out for a high-end fashion retail outlet.' },
+  { id: 0, image: '/0.png', title: 'Building Construction', description: 'Gray structure for 10 marla 8 floor plaza in DHA 1 Islamabad execution.' },
+  { id: 1, image: '/1.jpeg', title: 'MTJ Kiosk Surveys', description: 'Production and execution of kiosk surveys and site analysis at Giga Mall, Islamabad.' },
+  { id: 2, image: '/2.jpeg', title: 'Mall Production Works', description: 'On-site execution and high-end kiosk production at Centaurus Mall, Blue Area, Islamabad.' },
+  { id: 3, image: '/3.jpeg', title: 'Premium Retail Signage', description: 'Bespoke signage solutions designed for premium retail environments and luxury brands.' },
+  { id: 4, image: '/4.jpeg', title: 'Askari Bank Branding', description: 'Full branding (Vinyls, Standies, Penaflex, Frosting) for Askari Bank branches in North areas, Bahria Phase 4, and Rawalpindi.' },
+  { id: 5, image: '/5.jpeg', title: 'Digital Bill Boarding', description: 'Custom 3D backlit and unlit boarding solutions for private clients in Islamabad and Rawalpindi.' },
+  { id: 6, image: '/6.jpeg', title: 'Custom 3D Signage', description: 'Premium 3D signs and structural board installations for local business hubs.' },
+  { id: 7, image: '/7.jpeg', title: 'Commercial Wall Paper', description: 'Professional wall paper and branding wall setups for corporate offices in Islamabad.' },
+  { id: 8, image: '/8.jpeg', title: 'Unlit Board Solutions', description: 'Durable unlit boards and vinyl branding for local shops and private enterprises.' },
+  { id: 9, image: '/9.jpeg', title: 'Backlit Signage Work', description: 'High-visibility backlit boards and signage for 24/7 brand exposure in busy commercial areas.' },
+  { id: 10, image: '/10.jpeg', title: 'Digital Media Display', description: 'Innovative digital display solutions and wallpaper branding for modern retail spaces.' },
+  { id: 11, image: '/11.jpeg', title: 'Private Client Branding', description: 'Tailored branding solutions including vinyls and boards for private clients across Rawalpindi.' },
+  { id: 12, image: '/12.jpeg', title: 'Structural Boarding', description: 'Expert design and execution of structural boards and unlit signage for local hubs.' },
   { id: 13, image: '/13.jpeg', title: 'Security System Setup', description: 'High-definition CCTV and biometric access control for a secure perimeter.' },
   { id: 14, image: '/14.jpeg', title: 'Plumbing Infrastructure', description: 'Modernizing the water and drainage systems with leak-proof technology.' },
   { id: 15, image: '/15.jpeg', title: 'Custom Carpentry Work', description: 'Bespoke shelving and furniture handcrafted for a unique home library.' },
   { id: 16, image: '/16.jpeg', title: 'Roofing & Insulation', description: 'Expert roofing replacement with high-efficiency thermal insulation layer.' },
   { id: 17, image: '/17.jpeg', title: 'HVAC Maintenance', description: 'Optimization of heating and cooling systems for maximum energy savings.' },
-  { id: 18, image: '/18.jpeg', title: 'Lighting Design', description: 'Cinematic interior lighting design to highlight architectural features.' },
-  { id: 19, image: '/19.jpeg', title: 'Office Network Setup', description: 'Enterprise-grade IT infrastructure and reliable Wi-Fi mesh systems.' },
-  { id: 20, image: '/20.jpeg', title: 'Renovation Final Touch', description: 'Detail-oriented finishing touches that bring a complete project to life.' },
+  { id: 18, image: '/18.jpeg', title: 'Oxbridge College Digital Board', description: 'Design and installation of high-impact digital billboards for Oxbridge College, Islamabad.' },
+  { id: 19, image: '/pepsi.jpeg', title: 'Pepsi Brandings & Execution', description: 'Comprehensive branding (Backlit boards, kanopies, vinyls) all over Rawalpindi, Islamabad, and site areas.' },
+  { id: 20, image: '/20.jpeg', title: 'Custom Furniture & Structure', description: 'Professional chair poshis, structural furniture, and workspace setup works.' },
 ];
+
+
 
 const Work = () => {
   const [showAll, setShowAll] = useState(false);
-  const visibleProjects = showAll ? workProjects : workProjects.slice(0, 3);
+  const visibleProjects = showAll ? workProjects : workProjects.slice(0, 6);
+
 
   const container = {
     hidden: { opacity: 0 },
@@ -83,7 +87,10 @@ const Work = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                className="group relative bg-white rounded-3xl overflow-hidden transition-all duration-500 border border-gray-100 shadow-[0_20px_50px_-15px_rgba(37,99,235,0.15),0_20px_50px_-15px_rgba(20,184,166,0.15)] hover:shadow-[0_25px_60px_-12px_rgba(37,99,235,0.25),0_25px_60px_-12px_rgba(20,184,166,0.25)] hover:border-blue-200/50"
+
+
+
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <motion.img
@@ -105,15 +112,13 @@ const Work = () => {
                   </p>
                 </div>
 
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-blue-600 uppercase tracking-widest border border-blue-100 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  Project #{project.id}
-                </div>
+
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="mt-20 text-center flex justify-center"
@@ -124,12 +129,13 @@ const Work = () => {
               className="px-10 py-4 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm md:text-base shadow-lg shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-2"
             >
               <span>
-                {showAll ? 'VIEW LESS' : `VIEW MORE PROJECTS (${workProjects.length - 3}+)`}
+                {showAll ? 'VIEW LESS' : `VIEW MORE PROJECTS (${workProjects.length - 6}+)`}
               </span>
-              <svg 
-                className={`w-5 h-5 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`} 
-                fill="none" 
-                stroke="currentColor" 
+
+              <svg
+                className={`w-5 h-5 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
