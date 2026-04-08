@@ -54,7 +54,7 @@ const Work = () => {
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2 opacity-50"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2 opacity-50"></div>
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2 md:px-6">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ const Work = () => {
 
                 </div>
 
-                <div className="p-8">
+                <div className="p-4 md:p-8">
                   <h3 className="text-2xl font-bold  mb-3 text-blue-600 transition-colors duration-300">
                     {project.title}
                   </h3>
@@ -127,7 +127,7 @@ const Work = () => {
           <MagneticButton distance={0.5}>
             <button
               onClick={() => setShowAll(!showAll)}
-              className="px-10 py-4 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm md:text-base shadow-lg shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-2"
+              className="px-5 py-3 md:px-8 md:py-4 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm md:text-base shadow-lg shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-2"
             >
               <span>
                 {showAll ? 'VIEW LESS' : `VIEW MORE PROJECTS (${workProjects.length - 6}+)`}

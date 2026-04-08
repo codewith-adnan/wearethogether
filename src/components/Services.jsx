@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  TrendingUp, 
-  Layout, 
-  Globe, 
+import {
+  TrendingUp,
+  Layout,
+  Globe,
   Sparkles,
   Zap,
   ShieldCheck,
@@ -137,20 +137,20 @@ const ServiceCard = ({ service }) => {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="relative p-10 bg-white rounded-3xl border border-gray-100 shadow-[0_30px_60px_-35px_rgba(37,99,235,0.25),0_30px_60px_-35px_rgba(20,184,166,0.25)] hover:shadow-[0_40px_80px_-25px_rgba(37,99,235,0.3)] transition-all duration-500 group overflow-hidden"
+      className="relative p-5 md:p-10 bg-white rounded-3xl border border-gray-100 shadow-[0_30px_60px_-35px_rgba(37,99,235,0.25),0_30px_60px_-35px_rgba(20,184,166,0.25)] hover:shadow-[0_40px_80px_-25px_rgba(37,99,235,0.3)] transition-all duration-500 group overflow-hidden"
     >
       <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl transition-opacity duration-500`}></div>
-      
+
       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-500/20`}>
         <motion.div
-           animate={{ 
+          animate={{
             rotate: [0, 5, -5, 0],
             scale: [1, 1.1, 1]
           }}
-          transition={{ 
-            duration: 4, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
         >
           <Icon size={32} />
@@ -179,7 +179,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 bg-gray-50/50 relative overflow-hidden">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2 md:px-6">
         <div className="text-center mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -203,16 +203,16 @@ const Services = () => {
 
         <div className="mt-24 text-center">
           <motion.div
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             className="flex justify-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="flex justify-center"
           >
             <MagneticButton distance={0.5}>
               <button
                 onClick={() => setShowLuxury(!showLuxury)}
-                className="px-12 py-5 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs md:text-sm shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
+                className="px-6 py-3 md:px-8 md:py-4 rounded-full mb-10 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs md:text-sm shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
               >
-                {showLuxury ? 'CLOSE GALLERY' : 'VIEW LUXURY SERVICES'}
+                {showLuxury ? 'GALLERY OPENED' : 'VIEW LUXURY SERVICES'}
                 <Sparkles className={`w-4 h-4 transition-transform duration-500 ${showLuxury ? 'rotate-180 text-blue-200' : 'group-hover:scale-125'}`} />
               </button>
             </MagneticButton>
@@ -237,9 +237,9 @@ const Services = () => {
                     whileHover={{ scale: 1.05 }}
                     className="relative aspect-[3/4] rounded-3xl overflow-hidden group shadow-xl cursor-crosshair"
                   >
-                    <img 
-                      src={img.src} 
-                      alt={img.title} 
+                    <img
+                      src={img.src}
+                      alt={img.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
@@ -256,8 +256,20 @@ const Services = () => {
                 ))}
               </div>
 
-              <div className="mt-16 text-center">
-                 <p className="text-gray-400 font-bold tracking-[0.4em] uppercase text-[10px]">End of Luxury Gallery</p>
+              <div className="mt-16 text-center space-y-8">
+                <p className="text-gray-400 font-bold tracking-[0.4em] uppercase text-[10px]">End of Luxury Gallery</p>
+
+                <div className="flex justify-center">
+                  <MagneticButton distance={0.5}>
+                    <button
+                      onClick={() => setShowLuxury(false)}
+                      className="px-8 py-4 rounded-full mb-10 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
+                    >
+                      CLOSE GALLERY
+                      <Sparkles className="w-4 h-4 text-blue-200 group-hover:rotate-180 transition-transform duration-500" />
+                    </button>
+                  </MagneticButton>
+                </div>
               </div>
             </motion.div>
           )}
