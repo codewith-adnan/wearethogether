@@ -46,9 +46,9 @@ const Partners = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-6xl font-black tracking-tighter uppercase text-gray-900 leading-tight"
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tight"
           >
-            Trusted by the <span className="text-blue-600">Best</span>
+            Trusted by the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Best</span>
           </motion.h2>
 
           <motion.p
@@ -63,7 +63,7 @@ const Partners = () => {
             excellence that drives results.
           </motion.p>
 
-          <div className="w-24 h-1 bg-blue-600 mt-8 rounded-full opacity-20"></div>
+
         </div>
 
         {/* Partners Grid */}

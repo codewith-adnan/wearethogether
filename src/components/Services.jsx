@@ -89,8 +89,10 @@ const Services = () => {
     <section id="services" className="py-10 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-dark mb-4 uppercase">Our Services</h2>
-          <div className="w-24 h-1 bg-primary mx-auto "></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tight">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Services</span>
+          </h2>
+
           <p className="text-gray-600 max-w-2xl mx-auto mt-[-5px] text-justify" >
             Quality work, guaranteed. We build lasting trust by fixing problems right the first time.
           </p>

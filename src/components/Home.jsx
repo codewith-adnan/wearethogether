@@ -55,7 +55,9 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-8xl font-black text-gray-900 leading-tight uppercase tracking-tighter"
           >
-            The <span className="text-blue-600">Technical</span><br />Doctor's
+            The <span className="text-blue-600">Technical</span><br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">Doctor's</span>
+
           </motion.h1>
 
           <motion.p

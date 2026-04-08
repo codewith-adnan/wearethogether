@@ -59,10 +59,11 @@ const PartnersSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-3xl md:text-6xl font-black tracking-tighter uppercase text-gray-900 leading-tight px-2"
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 uppercase tracking-tight"
           >
-            PARTNERSHIP FOR <span className="text-[#0000CC]">PROGRESS</span>
+            PARTNERSHIP FOR <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-500">PROGRESS</span>
           </motion.h2>
+
 
           <motion.p
             initial={{ opacity: 0, y: 10 }}
