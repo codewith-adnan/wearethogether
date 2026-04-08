@@ -11,7 +11,9 @@ import {
   Paintbrush,
   Camera,
   Hammer,
-  Home
+  Home,
+  Monitor,
+  Layers
 } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 
@@ -95,6 +97,22 @@ const coreServices = [
     description: "Trusted guidance and comprehensive services for buying, selling, or renting properties with expert market insights.",
     features: ["Property Analysis", "Legal Guidance", "Market Listings", "Investment Strategy"],
     color: "from-indigo-500 to-blue-700"
+  },
+  {
+    id: 11,
+    icon: Monitor,
+    title: "Digital Bill Boarding",
+    description: "High-impact digital outdoor advertising solutions featuring ultra-bright LED displays and dynamic content management.",
+    features: ["LED Display Setup", "Dynamic Content Control", "24/7 Visibility", "Structural Mounting"],
+    color: "from-violet-500 to-fuchsia-600"
+  },
+  {
+    id: 12,
+    icon: Layers,
+    title: "Wallpaper Installation",
+    description: "Professional wallpaper application and custom wall branding to personalize your residential or corporate environments.",
+    features: ["Custom Wall Branding", "Professional Fitting", "Texture Analysis", "Surface Preparation"],
+    color: "from-lime-500 to-green-600"
   }
 ];
 
@@ -119,7 +137,7 @@ const ServiceCard = ({ service }) => {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className="relative p-10 bg-white rounded-3xl border border-gray-100 shadow-[0_20px_50px_rgba(31,41,55,0.05)] hover:shadow-[0_40px_70px_rgba(37,99,235,0.1)] transition-all duration-500 group overflow-hidden"
+      className="relative p-10 bg-white rounded-3xl border border-gray-100 shadow-[0_30px_60px_-35px_rgba(37,99,235,0.25),0_30px_60px_-35px_rgba(20,184,166,0.25)] hover:shadow-[0_40px_80px_-25px_rgba(37,99,235,0.3)] transition-all duration-500 group overflow-hidden"
     >
       <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 -translate-y-1/2 translate-x-1/2 rounded-full blur-3xl transition-opacity duration-500`}></div>
       
@@ -192,10 +210,10 @@ const Services = () => {
             <MagneticButton distance={0.5}>
               <button
                 onClick={() => setShowLuxury(!showLuxury)}
-                className="px-12 py-5 rounded-full bg-gray-900 text-white font-bold tracking-widest text-xs md:text-sm shadow-2xl hover:bg-blue-600 transition-all duration-300 flex items-center gap-3 active:scale-95 group"
+                className="px-12 py-5 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs md:text-sm shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
               >
                 {showLuxury ? 'CLOSE GALLERY' : 'VIEW LUXURY SERVICES'}
-                <Sparkles className={`w-4 h-4 transition-transform duration-500 ${showLuxury ? 'rotate-180 text-blue-300' : 'group-hover:scale-125'}`} />
+                <Sparkles className={`w-4 h-4 transition-transform duration-500 ${showLuxury ? 'rotate-180 text-blue-200' : 'group-hover:scale-125'}`} />
               </button>
             </MagneticButton>
           </motion.div>
