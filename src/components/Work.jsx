@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import MagneticButton from './MagneticButton';
 
 const workProjects = [
   { id: 1, image: '/1.jpeg', title: 'Modern Living Space', description: 'A complete interior renovation focusing on open-concept design and natural lighting.' },
@@ -112,28 +113,31 @@ const Work = () => {
           </AnimatePresence>
         </motion.div>
 
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="mt-16 text-center"
+          className="mt-20 text-center flex justify-center"
         >
-          <button
-            onClick={() => setShowAll(!showAll)}
-            className="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-blue-600 shadow-xl"
-          >
-            <span className="relative">
-              {showAll ? 'View Less Projects' : `View More Projects (${workProjects.length - 3}+)`}
-            </span>
-            <svg
-              className={`ml-2 w-5 h-5 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <MagneticButton distance={0.5}>
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-10 py-4 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-wide text-sm md:text-base shadow-lg shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-2"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
+              <span>
+                {showAll ? 'VIEW LESS' : `VIEW MORE PROJECTS (${workProjects.length - 3}+)`}
+              </span>
+              <svg 
+                className={`w-5 h-5 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`} 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </MagneticButton>
         </motion.div>
+
       </div>
     </section>
   );
