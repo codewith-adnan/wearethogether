@@ -6,9 +6,11 @@ const logoBrandLines = '/brand line.png';
 const logoRP = '/rp.png';
 const logoGP = '/gp cor.png';
 const logoSSK = '/ssk.png';
-const logoELF = '/elf.png';
+const logoELF = '/aaa.png';
 const logoHL = '/hL.png';
-const logoBri = '/the bri.png';
+const logoHDM = '/hdm.png';
+const logoTheBri = '/the bri.png';
+const logoelf = '/elf.png';
 const bgImage = '/partner background.png';
 
 const PartnersSection = () => {
@@ -18,8 +20,9 @@ const PartnersSection = () => {
     { id: 3, name: "GP Corporation Pvt Ltd", desc: "A reliable partner in industrial support and supply chain management, contributing significantly to large-scale projects.", logo: logoGP },
     { id: 4, name: "SSK Builders Pvt Ltd", desc: "Our trusted partner in construction and infrastructure development, supporting commercial builds and site setups.", logo: logoSSK },
     { id: 5, name: "AA Fabrications", desc: "Experts in custom fabrication and metal works, delivering high-quality on-ground installations.", logo: logoELF },
-    { id: 6, name: "Hassan Digital Marketing", desc: "Our digital growth partner, specializing in social media management, paid advertising, and enhancing brand presence.", logo: logoHL },
-    { id: 7, name: "KB Tax & Corporate", desc: "Provides professional services in corporate compliance, taxation, and legal structuring.", logo: logoBri },
+    { id: 6, name: "Hassan", desc: "Digital Marketer specializing in performance marketing and digital growth.", logo: logoHDM },
+    { id: 7, name: "The Bright Pvt Ltd", desc: "Partner | CEO: Riffat Prince, Director: Muhammad Ahmed", logo: logoTheBri },
+    { id: 8, name: "KB Tax & Corporate Cosultant", desc: "Branding Expert specializing in premium identity and strategic positioning.", logo: logoelf },
   ];
 
   const [activeIndex, setActiveIndex] = useState(partners.length > 2 ? 2 : 0);
@@ -151,7 +154,7 @@ const PartnersSection = () => {
                             className={`max-h-full max-w-full object-contain transition-transform duration-300 ${partner.id === 1 ? 'scale-150' : ''}`}
                           />
                         </div>
-                        <h3 className={`font-bold tracking-wide mb-3 whitespace-nowrap ${isActive ? 'text-[1.1rem] md:text-xl text-white' : 'text-xs md:text-sm text-slate-300'}`}>
+                        <h3 className={`font-bold tracking-wide mb-3 whitespace-nowrap ${isActive ? 'text-base md:text-lg text-white' : 'text-[10px] md:text-xs text-slate-300'}`}>
                           {partner.name}
                         </h3>
                         <p className={`text-xs leading-relaxed px-1 ${isActive ? 'text-slate-200' : 'text-slate-500'}`}>
