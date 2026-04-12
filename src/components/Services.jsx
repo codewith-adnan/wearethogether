@@ -13,7 +13,11 @@ import {
   Hammer,
   Home,
   Monitor,
-  Layers
+  Layers,
+  Car,
+  Building2,
+  ShoppingBag,
+  Utensils
 } from 'lucide-react';
 import MagneticButton from './MagneticButton';
 
@@ -95,7 +99,7 @@ const coreServices = [
     icon: Home,
     title: "Real Estate",
     description: "Trusted guidance and comprehensive services for buying, selling, or renting properties with expert market insights.",
-    features: ["Property Analysis", "Legal Guidance", "Market Listings", "Investment Strategy"],
+    features: ["Buying, Selling & Rentals", "Commercial Properties", "Offices, Shops & Plots", "Expert Guidance & Valuation"],
     color: "from-indigo-500 to-blue-700"
   },
   {
@@ -108,28 +112,60 @@ const coreServices = [
   },
   {
     id: 12,
+    icon: Utensils,
+    title: "Kitchen Kings",
+    description: "Premium culinary experiences delivered to your doorstep. From authentic home-made delicacies and professional catering to fresh groceries and seamless online ordering.",
+    features: ["Home-Made Food", "Ready Meals & Catering", "Grocery & Food Essentials", "Online Ordering & Home Delivery"],
+    color: "from-green-600 to-emerald-700"
+  },
+  {
+    id: 13,
+    icon: Sparkles,
+    title: "LifeStyleLuxe",
+    description: "Elevate your daily living with premium wellness and lifestyle solutions. From holistic skincare and fitness therapies to gourmet meals and home spa experiences, we bring luxury and rejuvenation to your lifestyle.",
+    features: ["Skincare & Beauty", "Gourmet Foods & Home-Made Meals", "Yoga, Fitness & Relaxation Therapy", "Home Spa, Massage & Aromatherapy", "Cosmetics, Lifestyle Products & Food"],
+    color: "from-rose-400 to-orange-500"
+  },
+  {
+    id: 14,
     icon: Layers,
     title: "Wallpaper Installation",
     description: "Professional wallpaper application and custom wall branding to personalize your residential or corporate environments.",
     features: ["Custom Wall Branding", "Professional Fitting", "Texture Analysis", "Surface Preparation"],
     color: "from-lime-500 to-green-600"
+  },
+  {
+    id: 15,
+    icon: Car,
+    title: "Move Together",
+    description: "Unmatched mobility solutions providing seamless inter-city travel, premium car rentals, and shared commuting with a high-end vehicle fleet.",
+    features: ["City to City Tours", "Car Rental", "Car Pooling", "Luxury & Economy Vehicles"],
+    color: "from-blue-600 to-indigo-600"
+  },
+  {
+    id: 16,
+    icon: ShoppingBag,
+    title: "E-Commerce Vault",
+    description: "A complete end-to-end digital retail ecosystem. We handle everything from store development and product photography to secure payments and global logistics.",
+    features: ["Online Store Development", "Product Photography", "E-Commerce Management", "Digital Sales & Marketing", "Secure Payment Solutions", "Warehousing & Delivery"],
+    color: "from-purple-600 to-pink-600"
+  },
+  {
+    id: 17,
+    icon: Building2,
+    title: "Build Together",
+    description: "Excellence in infrastructure and real estate, delivering world-class construction and premium property management services.",
+    features: ["Civil Construction", "Commercial Projects", "Residential Projects", "Property Buying & Selling"],
+    color: "from-amber-600 to-yellow-700"
+  },
+  {
+    id: 18,
+    icon: ShieldCheck,
+    title: "The Technical Doctors",
+    description: "Comprehensive technical and maintenance solutions for modern spaces. From advanced electrical wiring and smart automation to structural repairs and luxury decorating.",
+    features: ["Wiring, Lighting & Generators", "Leak Repairs & Installations", "Steel, Glass & Aluminium", "Ceiling & Flooring", "Gypsum, Tiles, Piping & Roofing", "Home & Office Painting", "Interior & Exterior Decorating", "UPS, Solar & Smart Automation"],
+    color: "from-slate-600 to-blue-900"
   }
-];
-
-const luxuryImages = [
-  { id: 1, src: '/services.jpeg', title: 'Executive Presence' },
-  { id: 2, src: '/services (1).jpeg', title: 'Digital Signage' },
-  { id: 3, src: '/services (5).jpeg', title: 'Premium Branding' },
-  { id: 4, src: '/services (6).jpeg', title: 'Luxury Display' },
-  { id: 5, src: '/services (7).jpeg', title: 'Visual Identity' },
-  { id: 6, src: '/services (8).jpeg', title: 'Market Strategy' },
-  { id: 7, src: '/services (9).jpeg', title: 'Interactive Board' },
-  { id: 8, src: '/services (10).jpeg', title: 'Corporate Events' },
-  { id: 9, src: '/services (11).jpeg', title: 'Global Campaign' },
-  { id: 10, src: '/services (12).jpeg', title: 'Agency Standard' },
-  { id: 11, src: '/services (13).jpeg', title: 'Creative Assets' },
-  { id: 12, src: '/services (14).jpeg', title: 'Production Excellence' },
-  { id: 13, src: '/services (15).jpeg', title: 'Final Polish' },
 ];
 
 const ServiceCard = ({ service }) => {
@@ -175,7 +211,9 @@ const ServiceCard = ({ service }) => {
 };
 
 const Services = () => {
-  const [showLuxury, setShowLuxury] = useState(false);
+  const [showAll, setShowAll] = useState(false);
+  const initialServices = coreServices.slice(0, 6);
+  const additionalServices = coreServices.slice(6);
 
   return (
     <section id="services" className="py-24 bg-gray-50/50 relative overflow-hidden">
@@ -196,12 +234,30 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {coreServices.map((service) => (
+          {initialServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
 
-        <div className="mt-24 text-center">
+        <AnimatePresence>
+          {showAll && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+              className="mt-8 overflow-hidden"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {additionalServices.map((service) => (
+                  <ServiceCard key={service.id} service={service} />
+                ))}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="mt-20 text-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -209,71 +265,15 @@ const Services = () => {
           >
             <MagneticButton distance={0.5}>
               <button
-                onClick={() => setShowLuxury(!showLuxury)}
-                className="px-6 py-3 md:px-8 md:py-4 rounded-full mb-10 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs md:text-sm shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
+                onClick={() => setShowAll(!showAll)}
+                className="px-6 py-3 md:px-8 md:py-4 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs md:text-sm shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
               >
-                {showLuxury ? 'GALLERY OPENED' : 'VIEW LUXURY SERVICES'}
-                <Sparkles className={`w-4 h-4 transition-transform duration-500 ${showLuxury ? 'rotate-180 text-blue-200' : 'group-hover:scale-125'}`} />
+                {showAll ? 'CLOSE SERVICES' : 'VIEW MORE SERVICES'}
+                <Sparkles className={`w-4 h-4 transition-transform duration-500 ${showAll ? 'rotate-180 text-blue-200' : 'group-hover:scale-125'}`} />
               </button>
             </MagneticButton>
           </motion.div>
         </div>
-
-        <AnimatePresence>
-          {showLuxury && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-              className="mt-20 overflow-hidden"
-            >
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {luxuryImages.map((img) => (
-                  <motion.div
-                    key={img.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="relative aspect-[3/4] rounded-3xl overflow-hidden group shadow-xl cursor-crosshair"
-                  >
-                    <img
-                      src={img.src}
-                      alt={img.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-                      <motion.div
-                        initial={{ y: 20, opacity: 0 }}
-                        whileInHover={{ y: 0, opacity: 1 }}
-                        className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
-                      >
-                        <p className="text-blue-400 text-xs font-black tracking-widest uppercase mb-2">Luxury Tier</p>
-                        <h4 className="text-xl font-bold text-white uppercase tracking-tighter">{img.title}</h4>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              <div className="mt-16 text-center space-y-8">
-                <p className="text-gray-400 font-bold tracking-[0.4em] uppercase text-[10px]">End of Luxury Gallery</p>
-
-                <div className="flex justify-center">
-                  <MagneticButton distance={0.5}>
-                    <button
-                      onClick={() => setShowLuxury(false)}
-                      className="px-8 py-4 rounded-full mb-10 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-bold tracking-widest text-xs shadow-xl shadow-blue-500/50 transform transition-all duration-300 hover:scale-105 hover:shadow-blue-500/60 active:scale-95 flex items-center gap-3 group"
-                    >
-                      CLOSE GALLERY
-                      <Sparkles className="w-4 h-4 text-blue-200 group-hover:rotate-180 transition-transform duration-500" />
-                    </button>
-                  </MagneticButton>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
       </div>
     </section>
   );
